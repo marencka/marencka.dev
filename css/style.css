@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|PT+Mono'); 
+
+/* This is so the header can spread edge to edge */
+body {
+  font-size: 20px; 
+  font-family: "Tahoma", sans-serif; 
+  margin: 0; 
+  color: white; 
+  background-color: #3A6EA5; 
+  overflow: hidden; 
+}
+
+header {
+  padding: 100px; 
+  text-align: center; 
+  color: #fff; 
+}
+
+a { 
+  margin: 10px; 
+  color: #FF3300; 
+}
+
+.columns {
+  display: flex; 
+}
+
+.column {
+  margin: 10px; 
+}
+
