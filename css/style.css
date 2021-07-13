@@ -2,11 +2,10 @@
 
 /* This is so the header can spread edge to edge */
 body {
-  font-size: 20px; 
-  font-family: "Tahoma", sans-serif; 
+  font-family: "Pixelated MS Sans Serif", Arial;
   margin: 0; 
   color: white; 
-  background-color: #3A6EA5; 
+  background-color: #008080;
   overflow: hidden; 
 }
 
@@ -17,8 +16,8 @@ header {
 }
 
 a { 
-  margin: 10px; 
-  color: #FF3300; 
+  color: white;  
+  text-decoration: none;
 }
 
 .columns {
@@ -27,5 +26,80 @@ a {
 
 .column {
   margin: 10px; 
+  width: 48px; 
 }
 
+.desktop {
+  width: 100%; 
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+.desktop-icons {
+  position: absolute; 
+  top: 8px;
+  left: 16px;
+}
+
+.desktop-icon {
+  width: 115px; 
+  height: 100px; 
+  color: white; 
+  text-align: center; 
+  background: no-repeat center top; 
+  padding-top: 55px; 
+}
+
+.my-computer{
+  background-image: url(https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png);
+}
+
+.about-me {
+  background-image: url(https://win98icons.alexmeub.com/icons/png/search_directory-0.png);
+}
+
+.contact {
+  background-image: url(https://win98icons.alexmeub.com/icons/png/entire_network_globe-0.png);
+}
+
+.startbar {
+  position: fixed; 
+  bottom: 0; 
+  left: 0;
+  display: block;
+  height: 38px; 
+  width: 100vw; 
+  background-color: #BDBEBD; 
+  border-top: 2px solid white; 
+  padding: 3px; 
+}
+
+#startbutton {
+  display: inline-block; 
+  float: left;
+  text-decoration: none; 
+  color: black; 
+  width: 70px; 
+  height: 29px; 
+  text-align: right; 
+  font-family: sans-serif; 
+  padding: 4px; 
+  background-image: url("http://vignette2.wikia.nocookie.net/logopedia/images/3/32/Microsoft_Windows_Compatible_Icon.png/revision/latest/scale-to-width-down/303?cb=20160806162438");
+  background-size: auto 70%; 
+  background-position: 5% 50%; 
+  background-repeat: no-repeat; 
+}
+
+.startbutton-on {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.startbutton-off {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
