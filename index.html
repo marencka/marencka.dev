@@ -7,9 +7,6 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <header>
-  </header>
-
   <body> 
     <div class="desktop">
     <div class="desktop-icons">
@@ -30,18 +27,28 @@
       
     </div>
 
+    <div id="intro-popup"></div>
 
-    <div class="startbar">
-      <div id="startbutton" class="startbutton-off">
-        <button>Start</button>
-      </div>
-      <div class="time"></div>
+    <div class="taskbar">
+      <div class="start-container">
+        <div id="start">
+          <button class="startbutton" id="start"><img src='https://raw.githubusercontent.com/lolstring/window98-html-css-js/master/app/images/win98_icons/windows.ico' alt="windows 98 start icon"/><span>Start</span></button>
+        </div>
+      </div> 
+
+      <div class="clock-container">
+        <div id="time" onload="clock()"></div>
+        <div class="volume"></div>
+      </div> 
     </div>
+
   </body>
 
   <footer>
  
   </footer>
+
+ <script src="js/script.js"></script>
 
 </html>
   
