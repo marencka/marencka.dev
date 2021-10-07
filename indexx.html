@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="stylesheet.css" rel="stylesheet">
+  <title>Alexis Danz</title>
+</head>
+
+<body onload="clock()">
+
+  <div class="icons">
+    <div class="computer-icon">
+      <input type="image" value="Show Div" onclick="showDiv()" src="img/computerIcon.png" name="computer-icon"
+        alt="Computer icon from Windows 2000">
+      <p>My Computer</p>
+    </div>
+
+    <div class="aboutme-icon">
+      <input type="image" src="img/aboutMe.png" name="aboutme-icon" alt="File and looking glass icon from Windows 2000">
+      <p>About Me</p>
+    </div>
+
+    <div class="contact-icon">
+      <input type="image" src="img/contact.png" name="contact-icon" alt="Globe icon from Windows 2000">
+      <p>Contact</p>
+    </div>
+  </div>
+
+  <div id="intro" style="display:none;" class="intro">
+    <h1>Big Boobs</h1>
+  </div>
+  
+  <div class="intro">
+    <div class="intro-header">
+      <p>Welcome</p>
+      <div class="intro-buttons">
+      <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+      <input type="image" value="closeOut" name="closeOut" src="img\closeOut.png" alt="A minimizing button">
+    </div>
+  </div>
+
+    <div class="intro-options">
+      <u>F</u>ile
+      <u>E</u>dit
+      <u>V</u>iew
+      <u>O</u>ptions
+      <u>H</u>elp
+    </div>
+
+    <div class="intro-content">
+      <h1>Hi! I'm Alexis.</h1>
+      <p>blah blah</p>
+      <img src="#" alt="A picture of me!">
+    </div>
+
+    <div class="intro-footer">
+    </div>
+
+  </div>
+
+
+
+
+  <footer>
+    <div id="taskbar">
+      <div class="startButton">
+        <input type="image" width="120" height="60" value="startButton" src="img/startbutton.png" name="startButton"
+          alt="Start icon from Windows 2000">
+      </div>
+
+      <div class="clock" id="clock">
+        <p>8:88PM</p>
+      </div>
+
+      <div class="volume">
+        <img src="img/volume.png" alt="volume speaker">
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <script>
+    function showDiv() {
+      document.getElementById('intro').style.display = "";
+    }
+
+    setInterval(function clock() {
+
+      const date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+
+      let ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      let strTime = hours + ':' + minutes + ' ' + ampm;
+
+      document.getElementById("clock").innerHTML = strTime;
+
+    }, 100);
+  </script>
+
+
+</body>
+
+</html>

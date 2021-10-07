@@ -24,6 +24,7 @@ a {
   text-decoration: none;
 }
 
+#welcomeDiv { }
 .columns {
   display: flex; 
 }

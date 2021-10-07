@@ -1,0 +1,150 @@
+/* Roots */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700%7CPT+Mono');
+@font-face { 
+  font-family: "w95fa"; 
+  src: url('css/w95fa.woff') format('woff'); 
+}
+:root { 
+  --blueGreen: #008080; 
+  --grey: #BDBEBD; 
+  --darkerGrey: #979997; 
+}
+
+
+body { 
+  background-color: var(--blueGreen);
+  margin: 0 auto;
+  font-family: w95fa;
+}
+
+/* Icons */
+.icons {  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  width: 150px;
+  position: relative;
+  left: 10px;
+  top: 20px;
+}
+
+.icons .computer-icon { 
+  flex-direction: column;
+  text-align: center;
+  color: #FFFFFF; 
+  margin-bottom: 20px;
+}
+
+.computer-icon p { 
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.icons .aboutme-icon { 
+  flex-direction: column;
+  text-align: center;
+  color: #FFFFFF; 
+  margin-bottom: 20px;
+}
+
+.aboutme-icon p { 
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.icons .contact-icon { 
+  flex-direction: column;
+  text-align: center;
+  color: #FFFFFF; 
+}
+
+.contact-icon p { 
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+/* Intro Message */
+.intro { 
+  position: absolute; 
+  left: 500px;
+  top: 600px;
+  width: 600px; 
+  height: 442px;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+
+.intro .intro-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.intro-header p { 
+  margin: 3px;
+}
+
+.intro .intro-buttons { 
+  padding: 3px;
+}
+
+.intro .intro-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  padding: 3px;
+  margin-bottom: 0;
+}
+
+.intro .intro-content { 
+  background-color:#ffffe1; 
+  height: 377px;
+}
+
+/* Taskbar */
+footer #taskbar { 
+  bottom: 0; 
+  position: fixed; 
+  width: 100%;
+  background-color: var(--grey);
+  border-top: 2px solid #FFFFFF; 
+  height: 65px;
+}
+
+#taskbar .startButton { 
+  z-index: 150;
+  width: 120px;
+  margin: 0;
+}
+
+#taskbar .clock { 
+  border: solid 2px; 
+  border-top-color: var(--darkerGrey); 
+  border-left-color: var(--darkerGrey); 
+  border-right-color: #FFFFFF; 
+  border-bottom-color: #FFFFFF; 
+  z-index: 150; 
+  position: fixed; 
+  bottom: 2px; 
+  right: 8px;
+  font-size: 24px;
+  max-width: 100px;
+  max-height: 40px;
+  text-align: center;
+  vertical-align: middle; 
+  margin: 10px 13px; 
+  padding: 10px 13px;
+}
+
+ .volume { 
+  z-index: 150;
+  position: fixed; 
+  right: 140px;
+  bottom: 16px;
+}
+
+
