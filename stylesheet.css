@@ -8,13 +8,15 @@
   --blueGreen: #008080; 
   --grey: #BDBEBD; 
   --darkerGrey: #979997; 
+  --lighterGrey: #e6e6e6;
 }
 
-
-body { 
+html, body { 
   background-color: var(--blueGreen);
   margin: 0 auto;
   font-family: w95fa;
+  cursor: url("img/cursor.png"), auto;
+  height: 100%;
 }
 
 /* Icons */
@@ -27,6 +29,7 @@ body {
   position: relative;
   left: 10px;
   top: 20px;
+  cursor: url("img/Cursor107.cur"), pointer;
 }
 
 .icons .computer-icon { 
@@ -64,11 +67,29 @@ body {
   font-size: 20px;
 }
 
+.icons .resume-icon { 
+  flex-direction: column;
+  text-align: center;
+  color: #FFFFFF; 
+  margin-top: 20px;
+}
+
+.resume-icon p { 
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.resume-icon a { 
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+
 /* Intro Message */
 .intro { 
+  left: 550px;
+  top: 250px;
   position: absolute; 
-  left: 500px;
-  top: 600px;
   width: 600px; 
   height: 450px;
   border-top: 2px solid #FFFFFF; 
@@ -88,10 +109,14 @@ body {
 
 .intro-header p { 
   margin: 3px;
+  cursor: url("img/Cursor107.cur"), pointer;
+
 }
 
 .intro .intro-buttons { 
   padding: 3px;
+  cursor: url("img/Cursor107.cur"), pointer;
+
 }
 
 .intro .intro-options { 
@@ -99,11 +124,13 @@ body {
   height: 18px;
   display: flex;
   justify-content: left;
+  cursor: url("img/Cursor107.cur"), pointer;
+
 }
 
 .intro-options p { 
   margin: 0;
-  padding-right: 2px;
+  padding-left: 3px;
   padding-top: 2px;
 }
 
@@ -124,12 +151,32 @@ body {
   border-top: 2px solid #000000;
   border-left: 2px solid #000000;
   border-right: 2px solid #FFFFFF; 
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF; 
 }
 
-.intro-content h1 { 
-  margin: 0; 
+.intro-content .text-content { 
+  width: 300px; 
+  height: 100px; 
+  position: absolute;
+  left: 40px;
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+
 }
+.text-content p { 
+  font-size: 20px;
+  margin: 0;
+}
+.intro-content img { 
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 75px; 
+  right: 20px;
+}
+
 
 .intro .intro-footer { 
   background-color: var(--grey); 
@@ -156,24 +203,332 @@ body {
 
 .intro-footer-content img { 
   margin-top: 10px;
+  
+}
+
+/* About Me Content */
+.aboutme-content { 
+  position: absolute; 
+  width: 600px; 
+  height: 450px;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.aboutme-content .aboutme-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.aboutme-header p { 
+  margin: 3px;
+  cursor: url("img/Cursor107.cur"), pointer;
+
+}
+
+.aboutme-content .aboutme-buttons { 
+  padding: 3px;
+  cursor: url("img/Cursor107.cur"), pointer;
+
+}
+
+.aboutme-content .aboutme-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+  cursor: url("img/Cursor107.cur"), pointer;
+
+}
+
+.aboutme-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.aboutme-content .aboutme-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.aboutme-content .aboutme-text { 
+  background-color:#ffffe1; 
+  width: 588px;
+  height: 370px;
+  display: table;
+  margin: 0 auto;
+  align-items: center;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #FFFFFF; 
+  position: absolute; 
+  left: 3px;
+}
+
+.aboutme-text { 
+  width: 300px; 
+  height: 100px; 
+  position: absolute;
+  left: 40px;
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+}
+
+.aboutme-text p { 
+  font-size: 20px;
+  margin: 0;
+}
+
+.aboutme-content .aboutme-footer { 
+  background-color: var(--grey); 
+  width: 590px; 
+  margin: 0 auto;
+  position: absolute; 
+  bottom: 1px;
+  left: 3px;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  padding-top: 1px;
+}
+
+.aboutme-footer .aboutme-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutme-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.aboutme-footer-content img { 
+  margin-top: 10px;
+  
 }
 
 
+
+/* Contact Content */
+.contact-content { 
+  position: absolute; 
+  width: 600px; 
+  height: 200px;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid orange;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.contact-content .contact-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.contact-header p { 
+  margin: 3px;
+  cursor: url("img/Cursor107.cur"), pointer;
+
+}
+
+.contact-content .contact-buttons { 
+  padding: 3px;
+  cursor: url("img/Cursor107.cur"), pointer;
+
+}
+
+.contact-content .contact-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+  cursor: url("img/Cursor107.cur"), pointer;
+
+}
+
+.contact-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.contact-content .contact-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.contact-content .contact-redirects { 
+  background-color: var(--grey); 
+  margin: 0 auto;
+  align-items: center;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #FFFFFF; 
+  position: absolute; 
+  left: 3px;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: center;
+  width: 590px;
+  padding: 0;
+}
+
+.contact-redirects h1 { 
+  position: absolute; 
+  top: 10px;
+  right: 100px;
+  padding: 0;
+}
+
+.contact-redirects .mail { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.mail a { 
+  color: #000000; 
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.contact-redirects .linkedin { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.linkedin a { 
+  color: #000000; 
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.contact-redirects .github { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.github a { 
+  color: #000000; 
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.contact-text p { 
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-content .contact-footer { 
+  background-color: var(--grey); 
+  width: 590px; 
+  margin: 0 auto;
+  position: absolute; 
+  left: 3px;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  padding-top: 1px;
+  z-index:100;
+  bottom: 2px;
+}
+
+.contact-footer .contact-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.contact-footer-content img { 
+  margin-top: 10px;
+  
+}
 
 /* Taskbar */
 footer #taskbar { 
   bottom: 0; 
   position: fixed; 
-  width: 100%;
   background-color: var(--grey);
   border-top: 2px solid #FFFFFF; 
   height: 65px;
+  width: 100%;
 }
 
 #taskbar .startButton { 
-  z-index: 150;
-  width: 120px;
-  margin: 0;
+  z-index: 150; 
+  position: fixed; 
+  bottom: 15px;
+  left: 2px;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #000000; 
+  border-right: 2px solid #000000;
+  width: 100px;
+  height: 37px;
+  display: flex; 
+  justify-content: space-around;
+  font-size: 22px;
+}
+
+#taskbar .startButton p { 
+  font-weight: 600;
+  position: relative;
+  bottom: 13px;
+}
+
+#taskbar .startButton:hover { 
+  cursor: url("img/Cursor107.cur"), pointer;
+}
+
+#taskbar .startButton:active { 
+  border-top: 2px solid #000000; 
+  border-left: 2px solid #000000; 
+  border-bottom: 2px solid #FFFFFF; 
+  border-right: 2px solid #FFFFFF;
+  background-color: var(--lighterGrey);
+  cursor: url("img/Cursor107.cur"), pointer;
 }
 
 #taskbar .clock { 
@@ -200,6 +555,42 @@ footer #taskbar {
   position: fixed; 
   right: 140px;
   bottom: 16px;
+}
+
+#taskbar .intro-button { 
+  z-index: 150; 
+  position: fixed; 
+  bottom: 15px;
+  left: 130px;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #000000; 
+  border-right: 2px solid #000000;
+  width: 150px;
+  height: 37px;
+  display: flex; 
+  justify-content: space-around;
+  font-size: 19px;
+  cursor: url("img/Cursor107.cur"), pointer;
+}
+
+#taskbar .intro-button:active { 
+  border-bottom: 2px solid #FFFFFF; 
+  border-right: 2px solid #FFFFFF; 
+  border-top: 2px solid #000000; 
+  border-left: 2px solid #000000;
+  background-color: var(--lighterGrey);
+}
+
+.intro-button p { 
+  font-weight: 600;
+  position: relative;
+  bottom: 10px;
+}
+
+.intro-button img { 
+  position: relative;
+  top: 100px;
 }
 
 

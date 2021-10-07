@@ -12,31 +12,36 @@
 <body onload="clock()">
 
   <div class="icons">
-    <div class="computer-icon">
+    <div class="computer-icon" id="computer-icon">
       <input type="image" value="Show Div" onclick="showDiv()" src="img/computerIcon.png" name="computer-icon"
         alt="Computer icon from Windows 2000">
-      <p>My Computer</p>
+      <p onclick="showDiv()">My Computer</p>
     </div>
 
-    <div class="aboutme-icon">
-      <input type="image" src="img/aboutMe.png" name="aboutme-icon" alt="File and looking glass icon from Windows 2000">
-      <p>About Me</p>
+    <div class="aboutme-icon" id="aboutme-icon">
+      <input type="image" onclick="showAboutMe()"src="img/aboutMe.png" name="aboutme-icon" alt="File and looking glass icon from Windows 2000">
+      <p onclick="showAboutMe()">About Me</p>
     </div>
 
-    <div class="contact-icon">
-      <input type="image" src="img/contact.png" name="contact-icon" alt="Globe icon from Windows 2000">
-      <p>Contact</p>
+    <div class="contact-icon" id="contact-icon">
+      <input type="image" onclick="showContact()" src="img/contact.png" name="contact-icon" alt="Globe icon from Windows 2000">
+      <p onclick="showContact()">Contact</p>
+    </div>
+
+    <div class="resume-icon" id="resume-icon">
+      <a href="resume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon" alt="Purple book with a yellow question mark on it">
+      <p>Resume</p></a>
     </div>
   </div>
   
   <div class="intro" id="intro">
     <div class="intro-header" id="intro-header">
-      <p>Welcome</p>
+      <p>welcome.html</p>
       <div class="intro-buttons">
-      <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
-      <input type="image" value="closeOut" name="closeOut" src="img\closeOut.png" alt="A minimizing button">
+      <input type="image" onclick="closeOut()" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+      <input type="image" id="closeOut" onclick="closeOut()" value="closeOut" name="closeOut" src="img\closeOut.png" alt="A minimizing button">
+      </div>
     </div>
-  </div>
 
     <div class="intro-options">
       <p><u>F</u>ile</p>
@@ -47,13 +52,17 @@
       <p><u>H</u>elp </p>
     </div>
 
-    <div class="intro-separator">
-    </div>
+    <div class="intro-separator"></div>
     <div class="intro-content">
       <br>
+      <div class="text-content">
       <h1>Hi! I'm Alexis.</h1>
-      <p>blah blah</p>
-      <img src="#" alt="A picture of me!">
+      <p>I'm currently a senior at UNC-Chapel Hill studying Computer Science and German.
+        <br>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      </p>
+      </div>
+      <img src="img/avatar.png" alt="A picture of me!">
     </div>
 
     <div class="intro-footer">
@@ -62,17 +71,114 @@
       <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
     </div>
   </div>
-
   </div>
 
 
 
+  <!-- ABOUT ME FILE -->
+  <div class="aboutme-content" id="aboutme-content" style="display: none;">
+
+    <div class="aboutme-header" id="aboutme-header">
+      <p>about-me.txt
+      </p>
+      <div class="aboutme-buttons">
+        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+        <input type="image" id="closeOut-aboutme" onclick="closeOutAboutMe()" value="closeOut" name="closeOut" src="img\closeOut.png" alt="A minimizing button">
+      </div>
+    </div>
+
+    <div class="aboutme-options">
+      <p><u>F</u>ile</p>
+      <br>
+      <p><u>E</u>dit </p>
+      <p><u>V</u>iew </p>
+      <p><u>O</u>ptions </p>
+      <p><u>H</u>elp </p>
+    </div>
+
+    <div class="aboutme-separator"></div>
+
+    <div class="aboutme-text">
+      <br>
+      <h1>About Me</h1>
+      <p>I'm currently a senior at UNC-Chapel Hill studying Computer Science and German.
+        <br>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      </p>
+    </div>
+
+    <div class="aboutme-footer">
+      <div class="aboutme-footer-content">
+        <p>2 object(s)</p>
+        <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+      </div>
+    </div>  
+  </div>
+
+
+
+<!-- CONTACT FILE -->
+  <div class="contact-content" id="contact-content" style="display: none;">
+   <div class="contact-header" id="contact-header">
+    <p>contact.txt</p>
+    <div class="contact-buttons">
+      <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+      <input type="image" id="closeOut-contact" onclick="closeOutContact()" value="closeOut" name="closeOut" src="img\closeOut.png" alt="A minimizing button">
+    </div>
+  </div>
+
+  <div class="contact-options">
+    <p><u>F</u>ile</p>
+    <br>
+    <p><u>E</u>dit </p>
+    <p><u>V</u>iew </p>
+    <p><u>O</u>ptions </p>
+    <p><u>H</u>elp </p>
+  </div>
+
+  <div class="contact-separator"></div>
+
+  <div class="contact-content">
+    <div class="contact-redirects">
+      <h1>Get in touch with me!</h1>
+      <div class="mail">
+        <a href="mailto:amdanz@live.unc.edu" target="_blank"><input height="100" width="100" type=image src="img/mail.png" name="mail-icon" alt="Digitized mail icon">
+          <p>Email</p></a>
+      </div>
+
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/in/alexisdanz/" target="_blank"><input height="100" width="100" type=image src="img/linkedin.png" name="linkedin-icon" alt="Digitized linkedin icon">
+          <p>LinkedIn</p></a>
+      </div>
+
+      <div class="github">
+        <a href="https://github.com/marencka" target="_blank"><input height="110" width="110" type=image src="img/github.png" name="github-icon" alt="Digitized GitHub icon">
+          <p>GitHub</p></a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="contact-footer">
+    <div class="contact-footer-content">
+    <p> object(s)</p>
+    <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+  </div>
+  </div>
+
+  </div> 
 
   <footer>
     <div id="taskbar">
       <div class="startButton">
-        <input type="image" width="120" height="60" value="startButton" src="img/startbutton.png" name="startButton"
+        <input type="image" value="startButton" src="img/windows-start.png" name="startButton"
           alt="Start icon from Windows 2000">
+          <p>Start</p>
+      </div>
+
+      <div class="intro-button">
+        <input onclick="showIntro()" type="image" height ="32px" value="intro-button" src="img/internet.png" name="intro-button" alt="internet explorer icon"> 
+        <p onclick="showIntro()">welcome.html</p>
       </div>
 
       <div class="clock" id="clock">
@@ -86,16 +192,7 @@
   </footer>
 
 
-
-
-
-
-
   <script>
-    function showDiv() {
-      document.getElementById('intro').style.display = "";
-    }
-
     setInterval(function clock() {
 
       const date = new Date();
@@ -115,6 +212,10 @@
 
 
     dragElement(document.getElementById("intro"));
+    dragElement(document.getElementById('aboutme-content'));
+    dragElement(document.getElementById('contact-content'));
+
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -156,7 +257,42 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-  </script>
+
+function showIntro() { 
+  var x = document.getElementById('intro'); 
+  if (x.style.display === 'none') { 
+    x.style.display = 'block'; 
+  } else { 
+    x.style.display = 'none';
+  }
+}
+
+function showAboutMe() { 
+    document.getElementById('aboutme-content').style.display = "block";
+}
+
+function showContact() { 
+  document.getElementById('contact-content').style.display = "block";
+}
+
+function closeOut() { 
+  var x = document.getElementById('closeOut'); 
+  var y = document.getElementById('intro');
+  y.style.display = 'none';
+}
+
+function closeOutAboutMe() { 
+  var x = document.getElementById('closeOutAboutMe'); 
+  var y = document.getElementById('aboutme-content');
+  y.style.display = 'none';
+}
+
+function closeOutContact() { 
+  var x = document.getElementById('closeOutContact'); 
+  var y = document.getElementById('contact-content');
+  y.style.display = 'none';
+}
+</script>
 
 
 </body>
