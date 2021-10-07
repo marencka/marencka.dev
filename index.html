@@ -5,29 +5,34 @@
     <meta name="viewport">
     <title>Alexis Danz</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
+
   </head>
 
-  <body> 
+  <body onload="clock()"> 
     <div class="desktop">
     <div class="desktop-icons">
-     <a href="index.html">
+     <a href="#">
        <div class="desktop-icon my-computer" title="My Computer">
          My Computer
       </div></a>
 
-      <a href="about-me.html">
+      <a href="#">
       <div class="desktop-icon about-me" title="About Me">
         About Me
       </div></a>
 
-      <a href="contact.html">
+      <a href="#">
         <div class="desktop-icon contact" title="Contact">
         Contact
       </div></a>
       
     </div>
 
-    <div id="intro-popup"></div>
+    <button onclick="showDiv()">CLICK HERE</button>
+
+    <div id="welcomeDiv"  style="display:none;" class="answer_list" > WELCOME</div>
+    <input type="button" name="answer" value="Show Div" onclick="showDiv()" />
 
     <div class="taskbar">
       <div class="start-container">
@@ -37,10 +42,12 @@
       </div> 
 
       <div class="clock-container">
-        <div id="time" onload="clock()"></div>
+        <div id="time"></div>
         <div class="volume"></div>
       </div> 
     </div>
+  <script src="js/script.js"></script>
+
 
   </body>
 
@@ -48,7 +55,7 @@
  
   </footer>
 
- <script src="js/script.js"></script>
+ 
 
 </html>
   

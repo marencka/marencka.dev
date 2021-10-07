@@ -13,7 +13,10 @@ setInterval(function clock() {
 
     document.getElementById("time").innerHTML = strTime;
 
-}, 1000); 
+}, 100); 
 
+function showDiv() {
+    document.getElementById('welcomeDiv').style.display = "block";
+ }
 
 
