@@ -3,68 +3,162 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="stylesheet.css" rel="stylesheet">
   <title>Alexis Danz</title>
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
-
 </head>
 
 <body onload="clock()">
-  <div class="desktop">
-    <div class="desktop-icons">
-      <a href="#">
-        <div class="desktop-icon my-computer" title="My Computer">
-          My Computer
-        </div>
-      </a>
 
-      <a href="#">
-        <div class="desktop-icon about-me" title="About Me">
-          About Me
-        </div>
-      </a>
-
-      <a href="#">
-        <div class="desktop-icon contact" title="Contact">
-          Contact
-        </div>
-      </a>
-
+  <div class="icons">
+    <div class="computer-icon">
+      <input type="image" value="Show Div" onclick="showDiv()" src="img/computerIcon.png" name="computer-icon"
+        alt="Computer icon from Windows 2000">
+      <p>My Computer</p>
     </div>
 
-    <div class="taskbar">
-      <div class="start-container">
-        <div id="start">
-          <button class="startbutton" id="start"><img
-              src='https://raw.githubusercontent.com/lolstring/window98-html-css-js/master/app/images/win98_icons/windows.ico'
-              alt="windows 98 start icon" /><span>Start</span></button>
-        </div>
+    <div class="aboutme-icon">
+      <input type="image" src="img/aboutMe.png" name="aboutme-icon" alt="File and looking glass icon from Windows 2000">
+      <p>About Me</p>
+    </div>
+
+    <div class="contact-icon">
+      <input type="image" src="img/contact.png" name="contact-icon" alt="Globe icon from Windows 2000">
+      <p>Contact</p>
+    </div>
+  </div>
+  
+  <div class="intro" id="intro">
+    <div class="intro-header" id="intro-header">
+      <p>Welcome</p>
+      <div class="intro-buttons">
+      <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+      <input type="image" value="closeOut" name="closeOut" src="img\closeOut.png" alt="A minimizing button">
+    </div>
+  </div>
+
+    <div class="intro-options">
+      <p><u>F</u>ile</p>
+      <br>
+      <p><u>E</u>dit </p>
+      <p><u>V</u>iew </p>
+      <p><u>O</u>ptions </p>
+      <p><u>H</u>elp </p>
+    </div>
+
+    <div class="intro-separator">
+    </div>
+    <div class="intro-content">
+      <br>
+      <h1>Hi! I'm Alexis.</h1>
+      <p>blah blah</p>
+      <img src="#" alt="A picture of me!">
+    </div>
+
+    <div class="intro-footer">
+      <div class="intro-footer-content">
+      <p>2 object(s)</p>
+      <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+  <footer>
+    <div id="taskbar">
+      <div class="startButton">
+        <input type="image" width="120" height="60" value="startButton" src="img/startbutton.png" name="startButton"
+          alt="Start icon from Windows 2000">
       </div>
 
-      <div class="clock-container">
-        <div id="time"></div>
-        <div class="volume"></div>
+      <div class="clock" id="clock">
+        <p>8:88PM</p>
+      </div>
+
+      <div class="volume">
+        <img src="img/volume.png" alt="volume speaker">
       </div>
     </div>
-
-    <div class="intro">
-      <p style="margin: 0 auto;">Hello</p>
-    </div>
+  </footer>
 
 
 
 
 
-    <script src="js/script.js"></script>
+
+
+  <script>
+    function showDiv() {
+      document.getElementById('intro').style.display = "";
+    }
+
+    setInterval(function clock() {
+
+      const date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+
+      let ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      let strTime = hours + ':' + minutes + ' ' + ampm;
+
+      document.getElementById("clock").innerHTML = strTime;
+
+    }, 100);
+
+
+
+    dragElement(document.getElementById("intro"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "-header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+  </script>
 
 
 </body>
-
-<footer>
-
-</footer>
-
-
 
 </html>

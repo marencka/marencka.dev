@@ -70,11 +70,12 @@ body {
   left: 500px;
   top: 600px;
   width: 600px; 
-  height: 442px;
+  height: 450px;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
-  border-bottom: 2px solid #000000;
-  border-right: 2px solid #000000;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
 }
 
 .intro .intro-header { 
@@ -96,14 +97,68 @@ body {
 .intro .intro-options { 
   background-color: var(--grey); 
   height: 18px;
-  padding: 3px;
-  margin-bottom: 0;
+  display: flex;
+  justify-content: left;
+}
+
+.intro-options p { 
+  margin: 0;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+
+.intro .intro-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
 }
 
 .intro .intro-content { 
   background-color:#ffffe1; 
-  height: 377px;
+  width: 588px;
+  height: 370px;
+  display: table;
+  margin: 0 auto;
+  align-items: center;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #FFFFFF;
 }
+
+.intro-content h1 { 
+  margin: 0; 
+}
+
+.intro .intro-footer { 
+  background-color: var(--grey); 
+  width: 588px; 
+  margin: 0 auto;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  padding-top: 1px;
+}
+
+.intro-footer .intro-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.intro-footer-content img { 
+  margin-top: 10px;
+}
+
+
 
 /* Taskbar */
 footer #taskbar { 
