@@ -688,9 +688,10 @@ footer #taskbar {
   top: 100px;
 }
 
+/* Start Menu */
 #startmenu { 
   width: 300px;
-  height: 600px;
+  height: 457px;
   display: flex; 
   flex-direction: column; 
   position: fixed;
@@ -711,20 +712,22 @@ footer #taskbar {
   color: #FFFFFF;
   text-align: center;
   font-size: 30px;
-  height: 43px;
-  width: 600px;
   margin: 0;
   padding: 0;
   background-color:#0808a9; 
   font-family: "MS Sans Serif", sans-serif;
-  position: relative;
-  right: 600px;
+  position: fixed;
+  z-index: 300;
+  height: 43px;
+  width: 457px;
+  left: -455px;
+  bottom: 481px;
 }
 
 #startmenu .startmenu-title h3 { 
   position: relative; 
   bottom: 33px;
-  right: 197px;
+  right: 120px;
 }
 
 #startmenu .startmenu-options { 
@@ -733,6 +736,183 @@ footer #taskbar {
   position: fixed; 
   z-index: 210;
   align-items: left;
-  left: 100px;
+  left: 45px;
+  padding-top: 10px;
+  bottom: 67px;
+  width: 100px;
 }
+
+#startmenu .startmenu-options .menu-partition { 
+  width: 100px;
+  height: 3px;
+  z-index: 250;
+  background-color: yellow;
+}
+
+.startmenu-options .computerIcon { 
+  background-color: var(--grey);
+  width: 247px;
+  margin-bottom: 0;
+  display: flex; 
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.startmenu-options .computerIcon:hover {
+  color: #FFFFFF; 
+  background-color: #0808a9; 
+  cursor: url("img/Cursor107.cur");
+
+}
+
+.computerIcon p { 
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.startmenu-options .aboutmeIcon { 
+  background-color: var(--grey);
+  width: 247px;
+  margin-bottom: 0;
+  display: flex; 
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.startmenu-options .aboutmeIcon:hover {
+  color: #FFFFFF; 
+  background-color: #0808a9; 
+  cursor: url("img/Cursor107.cur");
+}
+
+.aboutmeIcon p { 
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.startmenu-options .contactIcon { 
+  background-color:var(--grey);
+  width: 247px;
+  margin-bottom: 0;
+  display: flex; 
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.startmenu-options .contactIcon:hover {
+  color: #FFFFFF; 
+  background-color: #0808a9; 
+  cursor: url("img/Cursor107.cur");
+
+}
+
+.contactIcon p { 
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.startmenu-options .resumeIcon { 
+  background-color: var(--grey);
+  width: 247px;
+  height: auto;
+  margin-bottom: 0;
+  display: flex; 
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.startmenu-options .resumeIcon:hover {
+  color: #FFFFFF; 
+  background-color: #0808a9; 
+  cursor: url("img/Cursor107.cur");
+
+}
+
+.resumeIcon p { 
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  text-decoration: none; 
+  position: relative;
+  left: 50px;
+  top: -48px;
+
+}
+
+.resumeIcon a { 
+  text-decoration: none;
+  color: #000000; 
+}
+
+.menu-partition { 
+  width: 247px; 
+  height: 10px; 
+  background-color: red;
+  z-index: 250;
+}
+
+.startmenu-options .credits { 
+  background-color: var(--grey);
+  width: 247px;
+  margin-bottom: 0;
+  display: flex; 
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.startmenu-options .credits:hover {
+  color: #FFFFFF; 
+  background-color: #0808a9; 
+  cursor: url("img/Cursor107.cur");
+
+}
+
+
+.credits p { 
+  text-align: center;
+  align-items: center;
+  margin-left: 18px;
+}
+
+.startmenu-options .shutDown { 
+  background-color: var(--grey);
+  width: 247px;
+  margin-bottom: 0;
+  display: flex; 
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.startmenu-options .shutDown:hover {
+  color: #FFFFFF; 
+  background-color: #0808a9; 
+  cursor: url("img/Cursor107.cur");
+
+}
+
+.shutDown p { 
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+
+
+
+
 
