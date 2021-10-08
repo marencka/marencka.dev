@@ -90,8 +90,7 @@ html, body {
   left: 550px;
   top: 250px;
   position: absolute; 
-  width: 600px; 
-  height: 450px;
+  margin: 0 auto;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -105,6 +104,7 @@ html, body {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
+  cursor: url("img/Cursor107.cur"), pointer;
 }
 
 .intro-header p { 
@@ -188,6 +188,7 @@ html, body {
   border-bottom: 1px solid #FFFFFF; 
   border-right: 1px solid #FFFFFF;
   padding-top: 1px;
+  cursor: url("img/Cursor107.cur"), pointer;
 }
 
 .intro-footer .intro-footer-content { 
@@ -327,9 +328,9 @@ html, body {
 .contact-content { 
   position: absolute; 
   width: 600px; 
-  height: 200px;
+  height: 450px;
   border-top: 2px solid #FFFFFF; 
-  border-left: 2px solid orange;
+  border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
@@ -377,23 +378,50 @@ html, body {
   background-color: var(--grey);
 }
 
-.contact-content .contact-redirects { 
-  background-color: var(--grey); 
-  margin: 0 auto;
-  align-items: center;
-  border-top: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #FFFFFF; 
-  border-bottom: 2px solid #FFFFFF; 
-  position: absolute; 
-  left: 3px;
+
+.contact-content .contact-redirects .contact-icons { 
   display: flex; 
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  vertical-align: center;
-  width: 590px;
-  padding: 0;
+  margin-top: 100px;
+}
+
+.contact-content .contact-footer { 
+  background-color: var(--grey); 
+  width: 590px; 
+  margin: 0 auto;
+  position: absolute; 
+  bottom: 1px;
+  left: 3px;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  padding-top: 1px;
+}
+
+.contact-redirects .contact-icons { 
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 3px;
+}
+
+.contact-footer .contact-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.contact-footer-content img { 
+  margin-top: 10px;
+  
 }
 
 .contact-redirects h1 { 
@@ -404,8 +432,6 @@ html, body {
 }
 
 .contact-redirects .mail { 
-  display: flex; 
-  flex-direction: column; 
   align-items: center;
   text-align: center;
   padding: 0;
@@ -419,8 +445,6 @@ html, body {
 }
 
 .contact-redirects .linkedin { 
-  display: flex; 
-  flex-direction: column; 
   align-items: center;
   text-align: center;
   padding: 0;
@@ -434,8 +458,6 @@ html, body {
 }
 
 .contact-redirects .github { 
-  display: flex; 
-  flex-direction: column; 
   align-items: center;
   text-align: center;
   padding: 0;
@@ -486,6 +508,40 @@ html, body {
   
 }
 
+/* Clippy */
+#clippy img { 
+  position: absolute; 
+  right: 15px;
+  bottom: 80px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#clippy .clippy-message { 
+  position: absolute;
+  right: 80px;
+  bottom: 150px;
+  text-align: center;
+}
+
+.clippy-message .clippy-message-text { 
+  position: absolute; 
+  right: 150px;
+  bottom: 150px;
+  font-size: 20px;
+}
+
+
+@keyframes spin { 
+  from { 
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}
+
+
 /* Taskbar */
 footer #taskbar { 
   bottom: 0; 
@@ -531,6 +587,45 @@ footer #taskbar {
   cursor: url("img/Cursor107.cur"), pointer;
 }
 
+#taskbar .partition { 
+  width: 1px; 
+  height: 40px;
+  border-left: 1px solid var(--darkerGrey); 
+  border-right: 1px solid #FFFFFF;
+  position: relative;
+  bottom: -10px;
+  left: 116px;
+}
+
+#taskbar .icons { 
+  position: absolute;
+  display: flex; 
+  flex-direction: row; 
+  left: 120px;
+  justify-content: space-around;
+  top: 15px;
+  cursor: url("img/verboten.png"), pointer;
+}
+
+#taskbar .partition1 { 
+  width: 1px; 
+  height: 40px;
+  border-left: 1px solid var(--darkerGrey); 
+  border-right: 1px solid #FFFFFF;
+  position: relative;
+  bottom: 29px;
+  left: 268px;
+}
+
+#taskbar .partition2 { 
+  width: 1px; 
+  height: 40px;
+  border-left: 1px solid var(--darkerGrey); 
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  bottom: 100px;
+}
+
 #taskbar .clock { 
   border: solid 2px; 
   border-top-color: var(--darkerGrey); 
@@ -561,7 +656,7 @@ footer #taskbar {
   z-index: 150; 
   position: fixed; 
   bottom: 15px;
-  left: 130px;
+  left: 280px;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF; 
   border-bottom: 2px solid #000000; 
@@ -593,4 +688,51 @@ footer #taskbar {
   top: 100px;
 }
 
+#startmenu { 
+  width: 300px;
+  height: 600px;
+  display: flex; 
+  flex-direction: column; 
+  position: fixed;
+  left: 0px;
+  bottom: 65px;
+  background-color: var(--grey);
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF; 
+  border-bottom: 2px solid var(--darkerGrey); 
+  border-right: 2px solid var(--darkerGrey);
+  z-index: 200;
+  margin: 0;
+}
+
+#startmenu .startmenu-title  { 
+  transform-origin: 100% 0%; 
+  transform: rotate(270deg);
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 30px;
+  height: 43px;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  background-color:#0808a9; 
+  font-family: "MS Sans Serif", sans-serif;
+  position: relative;
+  right: 600px;
+}
+
+#startmenu .startmenu-title h3 { 
+  position: relative; 
+  bottom: 33px;
+  right: 197px;
+}
+
+#startmenu .startmenu-options { 
+  display: flex; 
+  flex-direction: column;
+  position: fixed; 
+  z-index: 210;
+  align-items: left;
+  left: 100px;
+}
 
