@@ -21,7 +21,7 @@
     <div class="aboutme-icon" id="aboutme-icon" onclick="showAboutMe()">
       <input type="image" onclick="showAboutMe()" src="img/aboutMe.png" name="aboutme-icon"
         alt="File and looking glass icon from Windows 2000">
-      <p onclick="showAboutMe()">About Me</p>
+      <p onclick="showAboutMe()">Projects</p>
     </div>
 
     <div class="contact-icon" onclick="showContact()" id="contact-icon">
@@ -88,7 +88,7 @@
   <div class="aboutme-content" id="aboutme-content" style="display: none;">
 
     <div class="aboutme-header" id="aboutme-header">
-      <p>about-me.txt
+      <p>projects.txt
       </p>
       <div class="aboutme-buttons">
         <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
@@ -110,7 +110,7 @@
 
     <div class="aboutme-text">
       <br>
-      <h1>About Me</h1>
+      <h1>Projects</h1>
       <p>I'm currently a senior at UNC-Chapel Hill studying Computer Science and German.
         <br>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -122,7 +122,7 @@
 
     <div class="aboutme-footer">
       <div class="aboutme-footer-content">
-        <p>2 object(s)</p>
+        <p>4 object(s)</p>
         <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
       </div>
     </div>
@@ -288,7 +288,7 @@
   <div class="terminal-content">
     <div class="terminal-header" id="terminal-header">
       <img src="img/terminal.png" alt="terminal icon from windows 98">
-      <h4>C:\WINDOWS\System32\cmd.exe</h4>
+      <h4>HyperTerminal</h4>
       <div class="terminal-buttons">
         <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
         <input type="image" id="closeOut-credits" onclick="closeOutCredits()" value="closeOut" name="closeOut"
@@ -308,6 +308,12 @@
     <div class="terminal-separator"></div>
 
     <div class="terminal-code" id="terminal-code">
+      <p>Microsoft Windows 98 [version 4.10.2222 A]</p>
+      
+      <p>  < C > Copyright 1999 Microsoft Corp.</p>
+        <br>
+        <br>
+        <p>C:\Users\marencka>_ shutdown</p>
     </div>
 
     <div class="terminal-footer">
@@ -493,18 +499,6 @@
         container.style.display = 'none';
       }
     });
-
-    var i = 0; 
-    var text = "Big Boobs"; 
-    var speed = 50; 
-
-    function typeWriter() { 
-      if (i < text.length) { 
-        document.getElementById('terminal-code').innerHTML += txt.charAt(i); 
-        i++; 
-        setTimeout(typeWriter, speed); 
-      }
-    }
 
   </script>
 
