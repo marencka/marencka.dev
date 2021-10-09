@@ -12,26 +12,26 @@
 <body onload="clock()">
 
   <div class="icons">
-    <div class="computer-icon" id="computer-icon">
+    <div class="computer-icon" onclick="showIntro()" id="computer-icon">
       <input type="image" value="Show Div" onclick="showIntro()" src="img/computerIcon.png" name="computer-icon"
         alt="Computer icon from Windows 2000">
       <p onclick="showIntro()">My Computer</p>
     </div>
 
-    <div class="aboutme-icon" id="aboutme-icon">
+    <div class="aboutme-icon" id="aboutme-icon" onclick="showAboutMe()">
       <input type="image" onclick="showAboutMe()" src="img/aboutMe.png" name="aboutme-icon"
         alt="File and looking glass icon from Windows 2000">
       <p onclick="showAboutMe()">About Me</p>
     </div>
 
-    <div class="contact-icon" id="contact-icon">
+    <div class="contact-icon" onclick="showContact()" id="contact-icon">
       <input type="image" onclick="showContact()" src="img/contact.png" name="contact-icon"
         alt="Globe icon from Windows 2000">
       <p onclick="showContact()">Contact</p>
     </div>
 
     <div class="resume-icon" id="resume-icon">
-      <a href="resume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
+      <a href="alexisdanzresume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
           alt="Purple book with a yellow question mark on it">
         <p>Resume</p>
       </a>
@@ -184,71 +184,143 @@
         <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
       </div>
     </div>
-
   </div>
 
-  <div id="clippy">
+
+  <div class="credits-content" id="credits-content" style="display:none;">
+    <div class="credits-header" id="credits-header">
+      <p>credits.txt</p>
+      <div class="credits-buttons">
+        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+        <input type="image" id="closeOut-credits" onclick="closeOutCredits()" value="closeOut" name="closeOut"
+          src="img\closeOut.png" alt="A minimizing button">
+      </div>
+    </div>
+
+    <div class="credits-options">
+      <p><u>F</u>ile</p>
+      <br>
+      <p><u>E</u>dit </p>
+      <p><u>V</u>iew </p>
+      <p><u>O</u>ptions </p>
+      <p><u>H</u>elp </p>
+    </div>
+
+    <div class="credits-separator"></div>
+
+    <div class="information">
+      <div class="info-icons">
+        <p>Thank you to <a href="https://win98icons.alexmeub.com/">Alex Meub</a> for his amazing repository with Windows
+          98 icons.</p>
+      </div>
+
+      <div class="info-inspo">
+        <p>Credit to <a href="https://hannahblair.co.uk/">Hannah Blair</a> for the digitized email, GitHub, and LinkedIn
+          icons!</p>
+      </div>
+    </div>
+
+    <div class="credits-footer">
+      <div class="credits-footer-content">
+        <p>2 object(s)</p>
+        <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="clippy">
     <div class="clippy-message">
       <img src="img/clippy_message_box.png" height="150" width="300" alt="Message box">
       <div class="clippy-message-text">
         <p>Hello!</p>
       </div>
     </div>
-    <img src="img/clippy.png" height="150" width="150" alt="Clippy from Microsoft">
+    <img src="img/clippy.png" height="150" width="150" alt="Clippy from Microsoft"> -->
 
   </div>
 
-  <div id="startmenu">
+  <!-- Start Menu -->
+  <div id="startmenu" style="display:none;">
     <div class="startmenu-title">
       <h3><strong>Windows</strong> 98</h3>
     </div>
 
     <div class="startmenu-options">
-      <div class="computerIcon" id="computerIcon">
-        <input type="image" value="Show Div" onclick="showIntro()" src="img/computerIcon.png" name="computer-icon"
-          alt="Computer icon from Windows 2000">
-        <p onclick="showIntro()">My Computer</p>
+      <div class="computerIcon" id="computerIcon" onclick="showIntroMessage()">
+        <input type="image" value="Show Div" onclick="showIntroMessage()" src="img/computerIcon.png"
+          name="computer-icon" alt="Computer icon from Windows 2000">
+        <p onclick="showIntroMessage()">My Computer</p>
       </div>
 
-      <div class="aboutmeIcon" id="aboutmeIcon">
+      <div class="aboutmeIcon" id="aboutmeIcon" onclick="showAboutMe()">
         <input type="image" onclick="showAboutMe()" src="img/aboutMe.png" name="aboutme-icon"
           alt="File and looking glass icon from Windows 2000">
         <p onclick="showAboutMe()">About Me</p>
       </div>
-  
-      <div class="contactIcon" id="contactIcon">
+
+      <div class="contactIcon" id="contactIcon" onclick="showContact()">
         <input type="image" onclick="showContact()" src="img/contact.png" name="contact-icon"
           alt="Globe icon from Windows 2000">
         <p onclick="showContact()">Contact</p>
       </div>
-  
-      <div class="resumeIcon" id="resumeIcon">
-        <a href="resume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
-            alt="Purple book with a yellow question mark on it">
-          <p>Resume</p>
-        </a>
+
+      <div class="resumeIcon" id="resumeIcon" onclick="openResume()">
+        <input type=image src="img/resume.png" name="resume-icon" alt="Purple book with a yellow question mark on it">
+        <p>Resume</p>
       </div>
 
-      <div class="menu-partiton"></div>
-
-      <div class="credits">
-        <input type="image" onclick="" src="img/credits.png" alt="Each face of cards">
-        <p>Credits</p>
+      <div class="menu-partition">
       </div>
 
-      <div class="shutDown">
+      <div class="credits" onclick="showCredits()">
+        <input onclick="showCredits()" type="image" onclick="" src="img/credits.png" alt="Each face of cards">
+        <p onclick="showCredits()">Credits</p>
+      </div>
+
+      <div class="shutDown" onclick="typeWriter()">
         <input type="image" onclick="" src="img/shutdown.png" alt="computer with a blue screen">
         <p>Sh<u>u</u>t down</p>
       </div>
     </div>
   </div>
 
+  <!-- Terminal -->
+  <div class="terminal-content">
+    <div class="terminal-header" id="terminal-header">
+      <img src="img/terminal.png" alt="terminal icon from windows 98">
+      <h4>C:\WINDOWS\System32\cmd.exe</h4>
+      <div class="terminal-buttons">
+        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+        <input type="image" id="closeOut-credits" onclick="closeOutCredits()" value="closeOut" name="closeOut"
+          src="img\closeOut.png" alt="A minimizing button">
+      </div>
+    </div>
 
+    <div class="terminal-options">
+      <p><u>F</u>ile</p>
+      <br>
+      <p><u>E</u>dit </p>
+      <p><u>V</u>iew </p>
+      <p><u>O</u>ptions </p>
+      <p><u>H</u>elp </p>
+    </div>
 
+    <div class="terminal-separator"></div>
+
+    <div class="terminal-code" id="terminal-code">
+    </div>
+
+    <div class="terminal-footer">
+      <div class="terminal-footer-content">
+        <p>2 object(s)</p>
+        <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div id="taskbar">
-      <div class="startButton">
+      <div class="startButton" onclick="showStart()">
         <input type="image" value="startButton" src="img/windows-start.png" name="startButton"
           alt="Start icon from Windows 2000">
         <p>Start</p>
@@ -308,6 +380,7 @@
     dragElement(document.getElementById("intro"));
     dragElement(document.getElementById('aboutme-content'));
     dragElement(document.getElementById('contact-content'));
+    dragElement(document.getElementById('credits-content'));
 
 
 
@@ -352,6 +425,13 @@
       }
     }
 
+    function showIntroMessage() {
+      var x = document.getElementById('intro');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      }
+    }
+
     function showIntro() {
       var x = document.getElementById('intro');
       if (x.style.display === 'none') {
@@ -385,6 +465,45 @@
       var x = document.getElementById('closeOutContact');
       var y = document.getElementById('contact-content');
       y.style.display = 'none';
+    }
+
+    function showStart() {
+      var x = document.getElementById('startmenu');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
+
+    function showCredits() {
+      var x = document.getElementById('credits-content');
+      x.style.display = 'block';
+    }
+
+    function closeOutCredits() {
+      var x = document.getElementById('closeOutCredits');
+      var y = document.getElementById('credits-content');
+      y.style.display = 'none';
+    }
+
+    document.addEventListener('mouseup', function (e) {
+      var container = document.getElementById('startmenu');
+      if (!container.contains(e.target)) {
+        container.style.display = 'none';
+      }
+    });
+
+    var i = 0; 
+    var text = "Big Boobs"; 
+    var speed = 50; 
+
+    function typeWriter() { 
+      if (i < text.length) { 
+        document.getElementById('terminal-code').innerHTML += txt.charAt(i); 
+        i++; 
+        setTimeout(typeWriter, speed); 
+      }
     }
 
   </script>
