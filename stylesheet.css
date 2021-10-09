@@ -265,8 +265,6 @@ html, body {
   width: 588px;
   height: 370px;
   display: table;
-  margin: 0 auto;
-  align-items: center;
   border-top: 2px solid #000000;
   border-left: 2px solid #000000;
   border-right: 2px solid #FFFFFF; 
@@ -285,9 +283,16 @@ html, body {
   text-align: center;
 }
 
-.aboutme-text p { 
+.aboutme-text ul { 
   font-size: 20px;
-  margin: 0;
+  text-align: left;
+  position: relative; 
+  bottom: 10px;
+  margin: 7px;;
+}
+
+.aboutme-text ul li ul li { 
+  margin-top: 7px;
 }
 
 .aboutme-content .aboutme-footer { 
@@ -562,7 +567,7 @@ html, body {
   background-color: var(--grey);
 }
 
-.terminal-content .terminal-code { 
+.terminal-content .css-typing { 
   background-color: #000000;
   width: 588px;
   height: 370px;
@@ -577,7 +582,7 @@ html, body {
   left: 3px;
 }
 
-.terminal-code { 
+.css-typing { 
   width: 100px; 
   height: 100px; 
   position: absolute;
@@ -618,33 +623,145 @@ html, body {
 
 .terminal-footer-content img { 
   margin-top: 10px;
-  
 }
 
-.terminal-content .terminal-code p { 
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid limegreen; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+.css-typing p {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 7.3em;
+  -webkit-animation: type 2s steps(23, end);
+  animation: type 2s steps(23, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-@keyframes typing { 
-  from { 
-    width: 0; 
+.css-typing p:nth-child(2) {
+  width: 11.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(30, end);
+  animation: type2 2s steps(30, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 7.3em;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(28, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(5) {
+  width: 7.3em;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(19, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(19, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
   }
-
-  to { 
-    width:100%; 
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
   }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: limegreen; }
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
 }
 
 /* Clippy */

@@ -111,12 +111,41 @@
     <div class="aboutme-text">
       <br>
       <h1>Projects</h1>
-      <p>I'm currently a senior at UNC-Chapel Hill studying Computer Science and German.
-        <br>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur."
+      <p>
+      <ul>
+        <li><em>2048 AI Player</em>
+          <ul>
+            <li style="margin-top:3px;">Python program that utilizes the
+              expectiminimax algorithm and
+              alpha beta pruning to create an
+              adversarial search agent to play the
+              2048 puzzle game.</li>
+          </ul>
+        </li>
+
+        <li><em>Sunset Chaser </em>
+          <ul>
+            <li>Utilizing the OpenWeatherAPI and a
+              mathematic equation to factor
+              various weather components to
+              calculate how vivid a sunset will be. </li>
+          </ul>
+        </li>
+
+        <li><em>Notify Me </em>
+          <ul>
+            <li>
+              Web scraping and twilio notifications for vaccination appointments
+            </li>
+          </ul>
+        </li>
+
+        <li><em>Machine Learning Book Recommender</em>
+          <ul>
+            <li>Currently working on</li>
+          </ul>
+        </li>
+      </ul>
       </p>
     </div>
 
@@ -246,10 +275,10 @@
     </div>
 
     <div class="startmenu-options">
-      <div class="computerIcon" id="computerIcon" onclick="showIntroMessage()">
-        <input type="image" value="Show Div" onclick="showIntroMessage()" src="img/computerIcon.png"
-          name="computer-icon" alt="Computer icon from Windows 2000">
-        <p onclick="showIntroMessage()">My Computer</p>
+      <div class="computerIcon" id="computerIcon" onclick="showIntro()">
+        <input type="image" value="Show Div" onclick="showIntroM()" src="img/computerIcon.png" name="computer-icon"
+          alt="Computer icon from Windows 2000">
+        <p onclick="showIntro()">My Computer</p>
       </div>
 
       <div class="aboutmeIcon" id="aboutmeIcon" onclick="showAboutMe()">
@@ -277,21 +306,21 @@
         <p onclick="showCredits()">Credits</p>
       </div>
 
-      <div class="shutDown" onclick="typeWriter()">
-        <input type="image" onclick="" src="img/shutdown.png" alt="computer with a blue screen">
-        <p>Sh<u>u</u>t down</p>
+      <div class="shutDown" onclick="showTerminal()">
+        <input type="image" onclick="showTerminal()" src="img/shutdown.png" alt="computer with a blue screen">
+        <p onclick="showTerminal()">Sh<u>u</u>t down</p>
       </div>
     </div>
   </div>
 
   <!-- Terminal -->
-  <div class="terminal-content">
+  <div class="terminal-content" id="terminal-content" style="display: none;">
     <div class="terminal-header" id="terminal-header">
       <img src="img/terminal.png" alt="terminal icon from windows 98">
       <h4>HyperTerminal</h4>
       <div class="terminal-buttons">
         <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
-        <input type="image" id="closeOut-credits" onclick="closeOutCredits()" value="closeOut" name="closeOut"
+        <input type="image" id="terminal-credits" onclick="closeOutTerminal()" value="closeOut" name="closeOut"
           src="img\closeOut.png" alt="A minimizing button">
       </div>
     </div>
@@ -307,13 +336,12 @@
 
     <div class="terminal-separator"></div>
 
-    <div class="terminal-code" id="terminal-code">
-      <p>Microsoft Windows 98 [version 4.10.2222 A]</p>
-      
-      <p>  < C > Copyright 1999 Microsoft Corp.</p>
-        <br>
-        <br>
-        <p>C:\Users\marencka>_ shutdown</p>
+    <div class="css-typing">
+      <p>Microsoft(R) Windows 98</p>
+      <p>(C) Copyright Microsoft Corp.</p>
+      <p>C:\Users\marencka>_ shutdown</p>
+      <br> 
+      <p>Thank you for visiting!</p>
     </div>
 
     <div class="terminal-footer">
@@ -431,13 +459,6 @@
       }
     }
 
-    function showIntroMessage() {
-      var x = document.getElementById('intro');
-      if (x.style.display === 'none') {
-        x.style.display = 'block';
-      }
-    }
-
     function showIntro() {
       var x = document.getElementById('intro');
       if (x.style.display === 'none') {
@@ -453,6 +474,14 @@
 
     function showContact() {
       document.getElementById('contact-content').style.display = "block";
+    }
+
+    function showTerminal() {
+      document.getElementById('terminal-content').style.display = 'block';
+    }
+
+    function showCredits() {
+      document.getElementById('credits-content').style.display = 'block';
     }
 
     function closeOut() {
@@ -473,6 +502,26 @@
       y.style.display = 'none';
     }
 
+
+    function closeOutCredits() {
+      var x = document.getElementById('closeOutCredits');
+      var y = document.getElementById('credits-content');
+      y.style.display = 'none';
+    }
+
+    function closeOutTerminal() {
+      document.getElementById('terminal-content').style.display = 'none';
+    }
+
+
+
+    document.addEventListener('mouseup', function (e) {
+      var container = document.getElementById('startmenu');
+      if (!container.contains(e.target)) {
+        container.style.display = 'none';
+      }
+    });
+
     function showStart() {
       var x = document.getElementById('startmenu');
       if (x.style.display === 'none') {
@@ -481,24 +530,6 @@
         x.style.display = 'none';
       }
     }
-
-    function showCredits() {
-      var x = document.getElementById('credits-content');
-      x.style.display = 'block';
-    }
-
-    function closeOutCredits() {
-      var x = document.getElementById('closeOutCredits');
-      var y = document.getElementById('credits-content');
-      y.style.display = 'none';
-    }
-
-    document.addEventListener('mouseup', function (e) {
-      var container = document.getElementById('startmenu');
-      if (!container.contains(e.target)) {
-        container.style.display = 'none';
-      }
-    });
 
   </script>
 
