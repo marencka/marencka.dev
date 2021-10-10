@@ -87,9 +87,9 @@ html, body {
 
 /* Intro Message */
 .intro { 
-  position: fixed; 
-  top: 50%; 
+  position: fixed;
   left: 50%;
+  transform: translate(-50%, 0);
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -390,21 +390,6 @@ html, body {
   margin-top: 100px;
 }
 
-.contact-content .contact-footer { 
-  background-color: var(--grey); 
-  width: 590px; 
-  margin: 0 auto;
-  position: absolute; 
-  bottom: 1px;
-  left: 3px;
-  height: 27px;
-  border-top: 1px solid var(--darkerGrey); 
-  border-left: 1px solid var(--darkerGrey); 
-  border-bottom: 1px solid #FFFFFF; 
-  border-right: 1px solid #FFFFFF;
-  padding-top: 1px;
-}
-
 .contact-redirects .contact-icons { 
   display: flex; 
   flex-direction: row;
@@ -485,6 +470,7 @@ html, body {
   width: 590px; 
   margin: 0 auto;
   position: absolute; 
+  bottom: 1px;
   left: 3px;
   height: 27px;
   border-top: 1px solid var(--darkerGrey); 
@@ -492,8 +478,6 @@ html, body {
   border-bottom: 1px solid #FFFFFF; 
   border-right: 1px solid #FFFFFF;
   padding-top: 1px;
-  z-index:100;
-  bottom: 2px;
 }
 
 .contact-footer .contact-footer-content { 
