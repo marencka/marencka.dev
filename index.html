@@ -10,6 +10,7 @@
 </head>
 
 <body onload="clock()">
+  <script src="js/script.js"></script>
 
   <div class="icons">
     <div class="computer-icon" onclick="showIntro()" id="computer-icon">
@@ -113,9 +114,9 @@
       <h1>Projects</h1>
       <p>
       <ul>
-        <li><em>2048 AI Player</em>
+        <li class="project-title"><em>2048 AI Player</em>
           <ul>
-            <li style="margin-top:3px;">Python program that utilizes the
+            <li class="projects">Python program that utilizes the
               expectiminimax algorithm and
               alpha beta pruning to create an
               adversarial search agent to play the
@@ -123,26 +124,32 @@
           </ul>
         </li>
 
-        <li><em>Sunset Chaser </em>
+        <li class="project-title"><em>Sunset Chaser </em>
           <ul>
-            <li>Utilizing the OpenWeatherAPI and a
+            <li class="projects">Utilizing the OpenWeatherAPI and a
               mathematic equation to factor
               various weather components to
               calculate how vivid a sunset will be. </li>
           </ul>
         </li>
 
-        <li><em>Notify Me </em>
+        <li class="project-title"><em>Notify Me </em>
           <ul>
-            <li>
-              Web scraping and twilio notifications for vaccination appointments
+            <li class="projects">
+              JavaScript program that parsed the
+              North Carolina vaccination
+              appointment website using JSDOM
+              at a set interval for health care workers.
             </li>
           </ul>
         </li>
 
-        <li><em>Machine Learning Book Recommender</em>
+        <li class="project-title"><em>Machine Learning Book Recommender</em>
           <ul>
-            <li>Currently working on</li>
+            <li class="projects">Currently working on a machine 
+              learning algorithm that uses logistic regression and 
+              decision tree learning to provide accurate book recommendations.
+            </li>
           </ul>
         </li>
       </ul>
@@ -338,9 +345,9 @@
 
     <div class="css-typing">
       <p>Microsoft(R) Windows 98</p>
-      <p>(C) Copyright Microsoft Corp.</p>
+      <p>&ltC&gt Copyright Microsoft Corp.</p>
       <p>C:\Users\marencka>_ shutdown</p>
-      <br> 
+      <br>
       <p>Thank you for visiting!</p>
     </div>
 
@@ -389,32 +396,12 @@
     </div>
   </footer>
 
-
   <script>
-
-
-    setInterval(function clock() {
-
-      const date = new Date();
-      let hours = date.getHours();
-      let minutes = date.getMinutes();
-
-      let ampm = hours >= 12 ? 'PM' : 'AM';
-      hours = hours % 12;
-      hours = hours ? hours : 12;
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      let strTime = hours + ':' + minutes + ' ' + ampm;
-
-      document.getElementById("clock").innerHTML = strTime;
-
-    }, 100);
-
-
-
     dragElement(document.getElementById("intro"));
     dragElement(document.getElementById('aboutme-content'));
     dragElement(document.getElementById('contact-content'));
     dragElement(document.getElementById('credits-content'));
+    dragElement(document.getElementById('terminal-content'));
 
 
 
@@ -459,81 +446,13 @@
       }
     }
 
-    function showIntro() {
-      var x = document.getElementById('intro');
-      if (x.style.display === 'none') {
-        x.style.display = 'block';
-      } else {
-        x.style.display = 'none';
-      }
-    }
-
-    function showAboutMe() {
-      document.getElementById('aboutme-content').style.display = "block";
-    }
-
-    function showContact() {
-      document.getElementById('contact-content').style.display = "block";
-    }
-
-    function showTerminal() {
-      document.getElementById('terminal-content').style.display = 'block';
-    }
-
-    function showCredits() {
-      document.getElementById('credits-content').style.display = 'block';
-    }
-
-    function closeOut() {
-      var x = document.getElementById('closeOut');
-      var y = document.getElementById('intro');
-      y.style.display = 'none';
-    }
-
-    function closeOutAboutMe() {
-      var x = document.getElementById('closeOutAboutMe');
-      var y = document.getElementById('aboutme-content');
-      y.style.display = 'none';
-    }
-
-    function closeOutContact() {
-      var x = document.getElementById('closeOutContact');
-      var y = document.getElementById('contact-content');
-      y.style.display = 'none';
-    }
-
-
-    function closeOutCredits() {
-      var x = document.getElementById('closeOutCredits');
-      var y = document.getElementById('credits-content');
-      y.style.display = 'none';
-    }
-
-    function closeOutTerminal() {
-      document.getElementById('terminal-content').style.display = 'none';
-    }
-
-
-
     document.addEventListener('mouseup', function (e) {
-      var container = document.getElementById('startmenu');
-      if (!container.contains(e.target)) {
-        container.style.display = 'none';
-      }
-    });
-
-    function showStart() {
-      var x = document.getElementById('startmenu');
-      if (x.style.display === 'none') {
-        x.style.display = 'block';
-      } else {
-        x.style.display = 'none';
-      }
-    }
-
+  var container = document.getElementById('startmenu');
+  if (!container.contains(e.target)) {
+    container.style.display = 'none';
+  }
+});
   </script>
-
-
 </body>
 
 </html>

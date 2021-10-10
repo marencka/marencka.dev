@@ -210,7 +210,7 @@ html, body {
 .aboutme-content { 
   position: absolute; 
   width: 600px; 
-  height: 450px;
+  height: 580px;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -263,7 +263,7 @@ html, body {
 .aboutme-content .aboutme-text { 
   background-color:#ffffe1; 
   width: 588px;
-  height: 370px;
+  height: 520px;
   display: table;
   border-top: 2px solid #000000;
   border-left: 2px solid #000000;
@@ -291,8 +291,8 @@ html, body {
   margin: 7px;;
 }
 
-.aboutme-text ul li ul li { 
-  margin-top: 7px;
+.aboutme-text .projects { 
+  margin-top: 20px;
 }
 
 .aboutme-content .aboutme-footer { 
@@ -323,8 +323,8 @@ html, body {
 
 .aboutme-footer-content img { 
   margin-top: 10px;
-  
 }
+
 
 
 
@@ -628,12 +628,13 @@ html, body {
 .css-typing p {
   border-right: .15em solid orange;
   font-family: "Courier";
-  font-size: 14px;
+  font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .css-typing p:nth-child(1) {
-  width: 7.3em;
+  width: 274px;
   -webkit-animation: type 2s steps(23, end);
   animation: type 2s steps(23, end);
   -webkit-animation-fill-mode: forwards;
@@ -641,10 +642,10 @@ html, body {
 }
 
 .css-typing p:nth-child(2) {
-  width: 11.5em;
+  width: 345px;
   opacity: 0;
-  -webkit-animation: type2 2s steps(30, end);
-  animation: type2 2s steps(30, end);
+  -webkit-animation: type2 2s steps(29, end);
+  animation: type2 2s steps(29, end);
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -652,23 +653,24 @@ html, body {
 }
 
 .css-typing p:nth-child(3) {
-  width: 7.3em;
+  width: 345px;
   opacity: 0;
-  -webkit-animation: type3 2s steps(28, end), blink .5s step-end infinite alternate;
-  animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation: type3 2s steps(28, end);
+  animation: type3 2s steps(28, end);
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  border: none;
 }
 
 .css-typing p:nth-child(5) {
-  width: 7.3em;
+  width: 280px;
   opacity: 0;
-  -webkit-animation: type3 2s steps(19, end), blink .5s step-end infinite alternate;
-  animation: type3 2s steps(19, end), blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
+  -webkit-animation: type3 2s steps(23, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(23, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -704,9 +706,6 @@ html, body {
   1% {
     opacity: 1;
   }
-  99.9% {
-    border-right: .15em solid orange;
-  }
   100% {
     opacity: 1;
     border: none;
@@ -719,9 +718,6 @@ html, body {
   }
   1% {
     opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
   }
   100% {
     opacity: 1;
