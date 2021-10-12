@@ -31,7 +31,7 @@
       <p onclick="showContact()">Contact</p>
     </div>
 
-    <div class="resume-icon" id="resume-icon">
+    <div class="resume-icon" id="resume-icon" onclick="openResume()">
       <a href="src/alexisdanzresume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
           alt="Purple book with a yellow question mark on it">
         <p>Resume</p>
@@ -304,7 +304,7 @@
       <div class="aboutmeIcon" id="aboutmeIcon" onclick="showAboutMe()">
         <input type="image" onclick="showAboutMe()" src="img/aboutMe.png" name="aboutme-icon"
           alt="File and looking glass icon from Windows 2000">
-        <p onclick="showAboutMe()">About Me</p>
+        <p onclick="showAboutMe()">Projects</p>
       </div>
 
       <div class="contactIcon" id="contactIcon" onclick="showContact()">
@@ -314,8 +314,8 @@
       </div>
 
       <div class="resumeIcon" id="resumeIcon" onclick="openResume()">
-        <input type=image src="img/resume.png" name="resume-icon" alt="Purple book with a yellow question mark on it">
-        <p>Resume</p>
+        <input type=image src="img/resume.png" onclick="openResume()" name="resume-icon" alt="Purple book with a yellow question mark on it">
+        <p onclick="openResume()">Resume</p>
       </div>
 
       <div class="menu-partition">
@@ -416,6 +416,10 @@
     dragElement(document.getElementById('credits-content'));
     dragElement(document.getElementById('terminal-content'));
 
+    function openResume() { 
+      window.open('src/alexisdanzresume.pdf', '_blank'); 
+      return false;
+    }
 
 
     function dragElement(elmnt) {
