@@ -32,7 +32,7 @@
     </div>
 
     <div class="resume-icon" id="resume-icon">
-      <a href="alexisdanzresume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
+      <a href="src/alexisdanzresume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
           alt="Purple book with a yellow question mark on it">
         <p>Resume</p>
       </a>
@@ -66,11 +66,22 @@
         <h1>Hi! I'm Alexis.</h1>
         <p>I'm currently a senior at UNC-Chapel Hill studying Computer Science and German.
           <br>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur."
-        </p>
+          <br>
+          My story started out in medicine as a biochemistry premed major. After working in the 
+          emergency department for two years, I realized that I loved science more than healthcare. 
+          Around this time, I started the process of building a gaming computer. It was here I identified
+          my love for technology.
+          <br>
+          <br> 
+          <div id="rectangle">
+          Despite never reading a line of code in my life, a terrible education in math, and no understanding of 
+          what computer science entailed -- I decided to take a leap of faith and switch my major to computer science. 
+          Here I found my passion for computational logic and power.
+          I have a deep interest in machine learning, natural language processing, chaos engineering, and algorithmic efficiency.
+          <br>
+          <br>
+          I am currently looking for a spring/winter internship as well as a New Grad May 2022 full-time position.
+        </div></p>
       </div>
       <img src="img/avatar.png" alt="A picture of me!">
     </div>
@@ -251,7 +262,7 @@
       </div>
 
       <div class="info-inspo">
-        <p>Credit to <a href="https://hannahblair.co.uk/">Hannah Blair</a> for the digitized email, GitHub, and LinkedIn
+        <p>Credit to <a href="https://hannahblair.co.uk/">Hannah Blair</a> for the pixelated email, GitHub, and LinkedIn
           icons!</p>
       </div>
     </div>
@@ -264,15 +275,17 @@
     </div>
   </div>
 
-  <!-- <div id="clippy">
+  <div class="clippy">
     <div class="clippy-message">
-      <img src="img/clippy_message_box.png" height="150" width="300" alt="Message box">
-      <div class="clippy-message-text">
-        <p>Hello!</p>
+      <img src="img/clippy_message_box.png" alt="Clippy message bubble" height="150" width="250">
+      <div class="text">
+        <p>Hi! I am Clippy, your office assistant. Click on Start for more information!</p>
       </div>
     </div>
-    <img src="img/clippy.png" height="150" width="150" alt="Clippy from Microsoft"> -->
 
+    <div class="clippy-body">
+      <img src="img/clippy.png" alt="Clippy from Microsoft" height="150" width="150">
+    </div>
   </div>
 
   <!-- Start Menu -->
@@ -379,10 +392,10 @@
       <div class="partition1">
       </div>
 
-      <div class="intro-button">
-        <input onclick="showIntro()" type="image" height="32px" value="intro-button" src="img/internet.png"
+      <div onclick="showIntro()" class="intro-button">
+        <input type="image" height="32px" value="intro-button" src="img/internet.png"
           name="intro-button" alt="internet explorer icon">
-        <p onclick="showIntro()">welcome.html</p>
+        <p>welcome.html</p>
       </div>
 
       <div class="partion2"></div>
@@ -453,6 +466,10 @@
   }
 });
   </script>
+
+  <!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script>
+<!-- / Fathom -->
 </body>
 
 </html>

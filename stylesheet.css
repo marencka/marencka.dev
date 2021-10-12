@@ -143,7 +143,7 @@ html, body {
 .intro .intro-content { 
   background-color:#ffffe1; 
   width: 588px;
-  height: 370px;
+  height: 570px;
   display: table;
   margin: 0 auto;
   align-items: center;
@@ -161,11 +161,20 @@ html, body {
   display: flex; 
   flex-direction: column;
   text-align: center;
+}
+
+.intro-content #rectangle { 
+  width: 500px;
+  margin: 0px;
+  font-size: 20px;
+  text-align: left;
 
 }
+
 .text-content p { 
   font-size: 20px;
   margin: 0;
+  text-align: left;
 }
 .intro-content img { 
   height: 200px;
@@ -211,6 +220,7 @@ html, body {
   position: absolute; 
   width: 600px; 
   height: 580px;
+  right: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -333,6 +343,7 @@ html, body {
   position: absolute; 
   width: 600px; 
   height: 450px;
+  left: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -501,6 +512,8 @@ html, body {
   position: absolute; 
   width: 600px; 
   height: 450px;
+  right: 30%; 
+  bottom: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -767,15 +780,6 @@ html, body {
   font-size: 20px;
 }
 
-
-@keyframes spin { 
-  from { 
-    transform: rotate(0deg);
-  }
-  to { 
-    transform: rotate(360deg);
-  }
-} */
 
 
 /* Taskbar */
@@ -1135,6 +1139,99 @@ footer #taskbar {
   margin-left: 10px;
 }
 
+/* Clippy */
+.clippy { 
+  position: fixed;
+  bottom: 60px; 
+  right: 0;
+  width: 400px;
+  height: 600px;
+  align-items: center;
+}
+
+.clippy .clippy-body { 
+  position: absolute;
+  bottom: 40px; 
+  right: 30px;
+  width: 150px;
+}
+
+.clippy .clippy-message { 
+  position: absolute; 
+  bottom: 180px;
+  left: 35px;
+}
+
+.clippy .clippy-message .text { 
+  position: absolute; 
+  bottom: 45px;
+  left: 10px;
+  font-size: 18px;
+  line-height: 1.25em;
+}
+
+.clippy .clippy-body { 
+  opacity: 0; 
+  -webkit-animation: swirl-in .6s ease-out 6s both, swirl-out .6s ease 13s;
+  animation: swirl-in .8s ease-out 6s both, swirl-out .6s ease 13s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.clippy .clippy-message { 
+  opacity: 0; 
+  animation: showUp .8s ease-out 6s both, goAway .6s ease 13s; 
+  animation-fill-mode: forwards;
+}
+
+/* Clippy Animations */
+@keyframes swirl-in { 
+  0% { 
+    --webkit-transform: rotate(-540deg) scale(0); 
+    transform: rotate(-540deg) scale(0); 
+    opacity: 0; 
+  }
+
+  100% { 
+    --webkit-transform: rotate(0) scale(1); 
+    transform: rotate(0) scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes swirl-out { 
+  0% {
+    --webkit-transform: rotate(0) scale(1); 
+    transform: rotate(0) scale(1); 
+    opacity: 1; 
+   }
+
+   100% { 
+    --webkit-transform: rotate(-540deg) scale(0); 
+    transform: rotate(-540deg) scale(0); 
+    opacity: 0; 
+   }
+}
+
+@keyframes showUp { 
+  0% { 
+    opacity: 0; 
+  }
+
+  100% { 
+    opacity: 1; 
+  }
+}
+
+@keyframes goAway { 
+  0% { 
+    opacity: 1; 
+  }
+
+  100% { 
+    opacity: 0; 
+  }
+}
 
 
 /* Credits Content */
@@ -1142,6 +1239,7 @@ footer #taskbar {
   position: absolute; 
   width: 600px; 
   height: 450px;
+  left: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
