@@ -17,6 +17,7 @@ html, body {
   font-family: w95fa;
   cursor: url("img/cursor.png"), auto;
   height: 100%;
+  line-height: 1.28em;
 }
 
 /* Icons */
@@ -889,7 +890,7 @@ footer #taskbar {
   z-index: 150;
   position: fixed; 
   right: 140px;
-  bottom: 16px;
+  bottom: 14px;
 }
 
 #taskbar .intro-button { 
