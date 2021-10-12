@@ -245,6 +245,7 @@ html, body {
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
+  bottom: 120px;
 }
 
 .aboutme-content .aboutme-header { 
