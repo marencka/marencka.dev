@@ -889,7 +889,7 @@ footer #taskbar {
   z-index: 150;
   position: fixed; 
   right: 140px;
-  bottom: 1px;
+  bottom: 13px;
 }
 
 #taskbar .intro-button { 
