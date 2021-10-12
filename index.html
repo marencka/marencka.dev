@@ -32,7 +32,7 @@
     </div>
 
     <div class="resume-icon" id="resume-icon" onclick="openResume()">
-      <a href="src/alexisdanzresume.pdf" target="_blank"><input type=image src="img/resume.png" name="resume-icon"
+     <input type=image src="img/resume.png" name="resume-icon"
           alt="Purple book with a yellow question mark on it">
         <p>Resume</p>
       </a>
@@ -43,9 +43,9 @@
     <div class="intro-header" id="intro-header">
       <p>welcome.html</p>
       <div class="intro-buttons">
-        <input type="image" onclick="closeOut()" value="minimize" name="minimize" src="img\minimize.png"
+        <input type="image"  onclick="closeOut()" value="minimize" name="minimize" src="img\minimize.png"
           alt="A minmimizing button">
-        <input type="image" id="closeOut" onclick="closeOut()" value="closeOut" name="closeOut" src="img\closeOut.png"
+        <input type="image"  id="closeOut" onclick="closeOut()" value="closeOut" name="closeOut" src="img\closeOut.png"
           alt="A minimizing button">
       </div>
     </div>
@@ -80,8 +80,8 @@
           I have a deep interest in machine learning, natural language processing, chaos engineering, and algorithmic efficiency.
           <br>
           <br>
-          I am currently looking for a spring/winter internship as well as a New Grad May 2022 full-time position.
-        </div></p>
+          I am currently looking for a spring/winter internship as well as a New Grad May 2022 full-time position.</p>
+        </div>
       </div>
       <img src="img/avatar.png" alt="A picture of me!">
     </div>
@@ -102,7 +102,7 @@
     <div class="aboutme-header" id="aboutme-header">
       <p>projects.txt
       </p>
-      <div class="aboutme-buttons">
+      <div class="aboutme-buttons" onclick="closeOutAboutMe()">
         <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
         <input type="image" id="closeOut-aboutme" onclick="closeOutAboutMe()" value="closeOut" name="closeOut"
           src="img\closeOut.png" alt="A minimizing button">
@@ -181,8 +181,8 @@
   <div class="contact-content" id="contact-content" style="display: none;">
     <div class="contact-header" id="contact-header">
       <p>contact.txt</p>
-      <div class="contact-buttons">
-        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
+      <div class="contact-buttons" onclick="closeOutContact()">
+        <input type="image" value="minimize" name="minimize" onclick="closeoutContact()"src="img\minimize.png" alt="A minmimizing button">
         <input type="image" id="closeOut-contact" onclick="closeOutContact()" value="closeOut" name="closeOut"
           src="img\closeOut.png" alt="A minimizing button">
       </div>
@@ -275,6 +275,7 @@
     </div>
   </div>
 
+  <!-- Clippy -->
   <div class="clippy">
     <div class="clippy-message">
       <img src="img/clippy_message_box.png" alt="Clippy message bubble" height="150" width="250">
@@ -322,7 +323,7 @@
       </div>
 
       <div class="credits" onclick="showCredits()">
-        <input onclick="showCredits()" type="image" width="48" height="48" src="img/credits.png" alt="An old school recording camera">
+        <input onclick="showCredits()" type="image" src="img/credits.png" alt="An old school recording camera">
         <p onclick="showCredits()">Credits</p>
       </div>
 
@@ -366,7 +367,7 @@
 
     <div class="terminal-footer">
       <div class="terminal-footer-content">
-        <p>2 object(s)</p>
+        <p>1 object(s)</p>
         <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
       </div>
     </div>
@@ -472,7 +473,7 @@
   </script>
 
   <!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script>
+<!-- <script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script> -->
 <!-- / Fathom -->
 </body>
 

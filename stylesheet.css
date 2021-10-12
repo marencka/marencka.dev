@@ -1349,3 +1349,742 @@ footer #taskbar {
 .credits-footer-content img { 
   margin-top: 10px;
 }
+
+
+
+
+
+
+/* 
+MOBILE 
+VERSION */
+@media only screen and (max-width: 480px) { 
+  body { 
+    background-color: #008080;
+  }
+
+/* Removing Displays */
+  #taskbar .icons { 
+    display: none;
+  }
+
+  #taskbar .partition1 { 
+    display: none;
+  }
+
+  #taskbar .partition { 
+    display: none;
+  }
+
+  #taskbar .partition2 { 
+    display: none; 
+  }
+
+  #taskbar .intro-button { 
+    display: none;
+  }
+
+  #taskbar .volume { 
+    display: none;
+  }
+  .clippy { 
+    display: none;
+  }
+
+  /* Icons */
+
+  .icons {  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    left: 18px;
+    height: 100px;
+  }
+  
+  .icons .computer-icon { 
+    flex-direction: column;
+    text-align: center;
+    color: #FFFFFF; 
+    margin-right: 20px;
+    height: 120px;
+  }
+
+  .computer-icon p { 
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .icons .aboutme-icon { 
+    flex-direction: column;
+    text-align: center;
+    color: #FFFFFF; 
+    margin-right: 20px;
+  }
+  
+  .aboutme-icon p { 
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .icons .contact-icon { 
+    flex-direction: column;
+    text-align: center;
+    color: #FFFFFF; 
+    margin-right: 10px;
+  }
+  
+  .contact-icon p { 
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .icons .resume-icon { 
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    left: 12px;
+  }
+  
+  .resume-icon p { 
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .resume-icon a { 
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  /* Intro */
+.intro { 
+  position: relative;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+  height: 820px; 
+  width: 320px;
+  top: 120px;
+}
+
+.intro .intro-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.intro-header p { 
+  position: relative; 
+  top: 10px;
+  font-size: 20px;
+}
+
+.intro .intro-buttons { 
+  position: relative;
+  top: 4px;
+}
+
+.intro .intro-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.intro-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.intro .intro-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.intro .intro-content { 
+  background-color:#ffffe1; 
+  width: 310px;
+  height: 724px;
+  display: table;
+  margin: 0 auto;
+  align-items: center;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #FFFFFF; 
+}
+
+.intro-content .text-content { 
+  width: 300px; 
+  height: 80px; 
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  text-align: left;
+  left: 6px;
+}
+
+.intro-content .text-content h1 { 
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
+.text-content p { 
+  font-size: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+.text-content #rectangle { 
+  width: 300px; 
+}
+
+.intro-content img { 
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 75px; 
+  right: 20px;
+}
+
+
+.intro .intro-footer { 
+  background-color: var(--grey); 
+  width: 312px; 
+  margin: 0 auto;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  padding-top: 1px;
+}
+
+.intro-footer .intro-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.intro-footer-content img { 
+  margin-top: 10px;
+}
+
+/* Projects Content */
+.aboutme-content { 
+  position: relative;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+  height: 980px; 
+  width: 320px;
+  top: 120px;
+  left: 26px;
+}
+
+.aboutme-content .aboutme-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.aboutme-header p { 
+  position: relative; 
+  top: 10px;
+  font-size: 20px;
+}
+
+.aboutme-content .aboutme-buttons { 
+  position: relative;
+  top: 4px;
+}
+
+.aboutme-content .aboutme-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.aboutme-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.aboutme-content .aboutme-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.aboutme-content .aboutme-text { 
+  width: 300px; 
+  height: 880px;
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  text-align: left;
+  left: 6px;
+}
+
+.aboutme-content .aboutme-text h1 { 
+  margin-bottom: 35px;
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+.aboutme-text p { 
+  font-size: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+
+.aboutme-content .aboutme-footer { 
+  background-color: var(--grey); 
+  width: 303px; 
+  margin: 0 auto;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  margin-top: 2px;
+  position: relative;
+  left: -3px;
+}
+
+.aboutme-footer .aboutme-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutme-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.aboutme-footer-content img { 
+  margin-top: 10px;
+}
+
+/* Contact */
+.contact-content { 
+  position: relative;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+  height: 650px; 
+  width: 320px;
+  top: 120px;
+  left: 26px;
+  margin-bottom: 100px;
+}
+
+.contact-content .contact-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.contact-header p { 
+  position: relative; 
+  top: 10px;
+  font-size: 20px;
+}
+
+.contact-content .contact-buttons { 
+  position: relative;
+  top: 4px;
+}
+
+.contact-content .contact-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.contact-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.contact-content .contact-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.contact-content .contact-redirects .contact-icons { 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.contact-redirects .contact-icons { 
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 3px;
+}
+
+.contact-footer .contact-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.contact-footer-content img { 
+  margin-top: 10px;
+}
+
+.contact-redirects h1 { 
+  position: absolute; 
+  top: 10px;
+  right: 100px;
+  padding: 0;
+}
+
+.contact-redirects .mail { 
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.mail a { 
+  color: #000000; 
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.contact-redirects .linkedin { 
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.linkedin a { 
+  color: #000000; 
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.contact-redirects .github { 
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.github a { 
+  color: #000000; 
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.contact-text p { 
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.contact-content .contact-footer { 
+  background-color: var(--grey); 
+  width: 319px; 
+  margin: 0 auto;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  margin-top: 2px;
+  position: relative;
+  left: -1px;
+  top: -4px;
+}
+
+.contact-footer .contact-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.contact-footer-content img { 
+  margin-top: 10px;
+}
+
+/* Credits */
+.credits-content { 
+  position: relative;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+  height: 297px; 
+  width: 320px;
+  top: 50px;
+  left: 25px;
+}
+
+.credits-content .credits-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.credits-header p { 
+  position: relative; 
+  top: 10px;
+  font-size: 20px;
+}
+
+.credits-content .credits-buttons { 
+  position: relative;
+  top: 4px;
+}
+
+.credits-content .credits-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.credits-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.credits-content .credits-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.credits-content .information { 
+  background-color:#ffffe1; 
+  display: table;
+  margin: 0 auto;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #FFFFFF; 
+  border-bottom: 2px solid #FFFFFF; 
+  width: 300px; 
+  height: 200px; 
+  position: relative;
+  text-align: left;
+  left: 0px;
+}
+
+.credits-content .information p { 
+  font-size: 22px;
+  margin: 20px;
+  text-align: left;
+}
+
+
+.credits-content .credits-footer { 
+  background-color: var(--grey); 
+  width: 302px; 
+  margin: 0 auto;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  padding-top: 1px;
+  position: relative;
+  left: 1px;
+}
+
+.credits-footer .credits-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.credits-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.credits-footer-content img { 
+  margin-top: 10px;
+}
+
+/* Taskbar */
+#taskbar { 
+  position: fixed;
+}
+
+#taskbar .startButton { 
+  width: 120px;
+  left: 10px;
+  font-size: 30px;
+}
+
+#taskbar .startButton input { 
+  position: relative;
+  left: -2px;
+}
+
+#taskbar .startButton p { 
+  position: relative; 
+  left: -6px;
+  top: -20px;
+}
+
+/* Terminal */
+.terminal-content { 
+  position: relative;
+  border-top: 2px solid #FFFFFF; 
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid var(--darkerGrey);
+  border-right: 2px solid var(--darkerGrey);
+  background-color: var(--grey);
+  height: 406px; 
+  width: 350px;
+  top: 120px;
+  left: 12px;
+}
+
+.terminal-content .terminal-header { 
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+  color: #FFFFFF;
+  background-color: #0808a9;
+}
+
+.terminal-header p { 
+  position: relative; 
+  top: 10px;
+  font-size: 20px;
+}
+
+.terminal-header h4 { 
+  position: relative;
+  left: -55px;
+  font-size: 22px;
+  top: 6px;
+}
+
+.terminal-content .terminal-buttons { 
+  position: relative;
+  top: 4px;
+}
+
+.terminal-content .terminal-options { 
+  background-color: var(--grey); 
+  height: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.terminal-options p { 
+  margin: 0;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.terminal-content .terminal-separator { 
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid var(--darkerGrey);
+  background-color: var(--grey);
+}
+
+.terminal-content .css-typing { 
+  width: 343px; 
+  height: 310px;
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  text-align: left;
+  left: -1px;
+}
+
+.terminal .css-typing p { 
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+}
+
+
+.terminal-content .terminal-footer { 
+  background-color: var(--grey); 
+  width: 344px; 
+  margin: 0 auto;
+  height: 27px;
+  border-top: 1px solid var(--darkerGrey); 
+  border-left: 1px solid var(--darkerGrey); 
+  border-bottom: 1px solid #FFFFFF; 
+  border-right: 1px solid #FFFFFF;
+  margin-top: 2px;
+  position: relative;
+  left: 0px;
+}
+
+.terminal-footer .terminal-footer-content { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal-footer-content p { 
+  margin-top: 6px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.terminal-footer-content img { 
+  margin-top: 10px;
+}
+
+}
