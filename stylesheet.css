@@ -212,8 +212,8 @@ html, body {
 }
 
 .intro-footer-content img { 
-  margin-top: 10px;
-  
+  position: absolute;
+  top: 10px;
 }
 
 /* About Me Content */
@@ -890,7 +890,7 @@ footer #taskbar {
   z-index: 150;
   position: fixed; 
   right: 140px;
-  bottom: 14px;
+  bottom: 1px;
 }
 
 #taskbar .intro-button { 
@@ -967,7 +967,7 @@ footer #taskbar {
 
 #startmenu .startmenu-title h3 { 
   position: relative; 
-  bottom: 33px;
+  bottom: 29px;
   right: 120px;
 }
 
