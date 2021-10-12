@@ -1,4 +1,4 @@
-setInterval(function clock() {
+var clock = setInterval(function clock() {
 
   const date = new Date();
   let hours = date.getHours();
@@ -40,35 +40,30 @@ function showCredits() {
   document.getElementById('credits-content').style.display = 'block';
 }
 
-function closeOut() {
-  var x = document.getElementById('closeOut');
-  var y = document.getElementById('intro');
-  y.style.display = 'none';
+function closeOutCredits() { 
+  document.getElementById('credits-content').style.display = 'none';
 }
 
-function closeOutAboutMe() {
-  var x = document.getElementById('closeOutAboutMe');
-  var y = document.getElementById('aboutme-content');
-  y.style.display = 'none';
-}
-
-function closeOutContact() {
-  var x = document.getElementById('closeOutContact');
-  var y = document.getElementById('contact-content');
-  y.style.display = 'none';
-}
-
-
-function closeOutCredits() {
-  var x = document.getElementById('closeOutCredits');
-  var y = document.getElementById('credits-content');
-  y.style.display = 'none';
-}
-
-function closeOutTerminal() {
+function closeOutTerminal() { 
   document.getElementById('terminal-content').style.display = 'none';
 }
 
+function closeOut() {
+  document.getElementById('intro').style.display = 'none';
+}
+
+function closeOutAboutMe() {
+  document.getElementById('aboutme-content').style.display = 'none';
+}
+
+function closeOutContact() {
+  document.getElementById('contact-content').style.display = 'none';
+}
+
+function openResume() { 
+  window.open('src/alexisdanzresume.pdf', '_blank'); 
+  return false;
+}
 
 function showStart() {
   var x = document.getElementById('startmenu');

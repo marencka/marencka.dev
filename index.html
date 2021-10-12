@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="stylesheet.css" rel="stylesheet">
   <title>Alexis Danz</title>
+  <meta name="description" content="Alexis Danz personal website, Windows 98 themed personal website">
+  <script src="js/script.js"></script>
 </head>
 
 <body onload="clock()">
-  <script src="js/script.js"></script>
+  
 
   <div class="icons">
     <div class="computer-icon" onclick="showIntro()" id="computer-icon">
@@ -43,10 +45,8 @@
     <div class="intro-header" id="intro-header">
       <p>welcome.html</p>
       <div class="intro-buttons">
-        <input type="image"  onclick="closeOut()" value="minimize" name="minimize" src="img\minimize.png"
-          alt="A minmimizing button">
-        <input type="image"  id="closeOut" onclick="closeOut()" value="closeOut" name="closeOut" src="img\closeOut.png"
-          alt="A minimizing button">
+        <button class="minimize" onclick="closeOut()"></button>
+        <button class="closeOut" onclick="closeOut()"></button>
       </div>
     </div>
 
@@ -103,9 +103,8 @@
       <p>projects.txt
       </p>
       <div class="aboutme-buttons" onclick="closeOutAboutMe()">
-        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
-        <input type="image" id="closeOut-aboutme" onclick="closeOutAboutMe()" value="closeOut" name="closeOut"
-          src="img\closeOut.png" alt="A minimizing button">
+        <button class="minimize" onclick="closeOutAboutMe()"></button>
+        <button class="closeOut" onclick="closeOutAboutMe()"></button>
       </div>
     </div>
 
@@ -182,9 +181,8 @@
     <div class="contact-header" id="contact-header">
       <p>contact.txt</p>
       <div class="contact-buttons" onclick="closeOutContact()">
-        <input type="image" value="minimize" name="minimize" onclick="closeoutContact()"src="img\minimize.png" alt="A minmimizing button">
-        <input type="image" id="closeOut-contact" onclick="closeOutContact()" value="closeOut" name="closeOut"
-          src="img\closeOut.png" alt="A minimizing button">
+        <button class="minimize" onclick="closeOutContact()"></button>
+        <button class="closeOut" onclick="closeOutContact()"></button>
       </div>
     </div>
 
@@ -209,7 +207,7 @@
         </div>
 
         <div class="linkedin">
-          <a href="https://www.linkedin.com/in/alexisdanz/" target="_blank"><input height="100" width="100" type=image
+          <a href="https://www.linkedin.com/in/alexisdanz/" rel="noreferrer" target="_blank"><input height="100" width="100" type=image
               src="img/linkedin.png" name="linkedin-icon" alt="Digitized linkedin icon">
             <p>LinkedIn</p>
           </a>
@@ -233,14 +231,13 @@
     </div>
   </div>
 
-
+<!-- Credits -->
   <div class="credits-content" id="credits-content" style="display:none;">
     <div class="credits-header" id="credits-header">
       <p>credits.txt</p>
-      <div class="credits-buttons">
-        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
-        <input type="image" id="closeOut-credits" onclick="closeOutCredits()" value="closeOut" name="closeOut"
-          src="img\closeOut.png" alt="A minimizing button">
+      <div class="credits-buttons" onclick="closeOutCredits()">
+        <button class="minimize" onclick="closeOutCredits()"></button>
+        <button class="closeOut" onclick="closeOutCredits()"></button>
       </div>
     </div>
 
@@ -339,10 +336,9 @@
     <div class="terminal-header" id="terminal-header">
       <img src="img/terminal.png" alt="terminal icon from windows 98">
       <h4>HyperTerminal</h4>
-      <div class="terminal-buttons">
-        <input type="image" value="minimize" name="minimize" src="img\minimize.png" alt="A minmimizing button">
-        <input type="image" id="terminal-credits" onclick="closeOutTerminal()" value="closeOut" name="closeOut"
-          src="img\closeOut.png" alt="A minimizing button">
+      <div class="terminal-buttons" onclick="closeOutTerminal()">
+        <button class="minimize" onclick="closeOutTerminal()"></button>
+        <button class="closeOut" onclick="closeOutTerminal()"></button>
       </div>
     </div>
 
@@ -409,72 +405,67 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    dragElement(document.getElementById("intro"));
-    dragElement(document.getElementById('aboutme-content'));
-    dragElement(document.getElementById('contact-content'));
-    dragElement(document.getElementById('credits-content'));
-    dragElement(document.getElementById('terminal-content'));
-
-    function openResume() { 
-      window.open('src/alexisdanzresume.pdf', '_blank'); 
-      return false;
-    }
-
-
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "-header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
-      } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
-      }
-
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-      }
-
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-
-      function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-
-  document.addEventListener('mouseup', function (e) {
-  var container = document.getElementById('startmenu');
-  if (!container.contains(e.target)) {
-    container.style.display = 'none';
-  }
-});
-  </script>
-
   <!-- Fathom - beautiful, simple website analytics -->
-<!-- <script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script> -->
+<script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script>
 <!-- / Fathom -->
+
+<script>
+  dragElement(document.getElementById("intro"));
+dragElement(document.getElementById('aboutme-content'));
+dragElement(document.getElementById('contact-content'));
+dragElement(document.getElementById('credits-content'));
+dragElement(document.getElementById('terminal-content'));
+
+
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "-header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+document.addEventListener('mouseup', function (e) {
+var container = document.getElementById('startmenu');
+if (!container.contains(e.target)) {
+container.style.display = 'none';
+}
+});
+</script>
 </body>
 
 </html>

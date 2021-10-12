@@ -114,9 +114,27 @@ html, body {
 }
 
 .intro .intro-buttons { 
-  padding: 3px;
+  margin-top: 1px;
   cursor: url("img/Cursor107.cur"), pointer;
+}
 
+.intro .intro-buttons .minimize { 
+  background-image: url('img/minimize.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  cursor: url('img/Cursor107.cur'), pointer;
+}
+
+.intro .intro-buttons .closeOut { 
+  background-image: url('img/closeOut.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+  cursor: url('img/Cursor107.cur'), pointer;
 }
 
 .intro .intro-options { 
@@ -243,9 +261,27 @@ html, body {
 }
 
 .aboutme-content .aboutme-buttons { 
-  padding: 3px;
+  margin: 1px;
   cursor: url("img/Cursor107.cur"), pointer;
+}
 
+.aboutme-content .aboutme-buttons .minimize { 
+  background-image: url('img/minimize.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  cursor: url('img/Cursor107.cur'), pointer;
+}
+
+.aboutme-content .aboutme-buttons .closeOut { 
+  background-image: url('img/closeOut.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+  cursor: url('img/Cursor107.cur'), pointer;
 }
 
 .aboutme-content .aboutme-options { 
@@ -366,9 +402,28 @@ html, body {
 }
 
 .contact-content .contact-buttons { 
-  padding: 3px;
+  margin-top: 1px;
   cursor: url("img/Cursor107.cur"), pointer;
 
+}
+
+.contact-content .contact-buttons .minimize { 
+  background-image: url('img/minimize.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  cursor: url('img/Cursor107.cur'), pointer;
+}
+
+.contact-content .contact-buttons .closeOut { 
+  background-image: url('img/closeOut.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+  cursor: url('img/Cursor107.cur'), pointer;
 }
 
 .contact-content .contact-options { 
@@ -537,9 +592,27 @@ html, body {
 }
 
 .terminal-content .terminal-buttons { 
-  padding: 3px;
+  margin-top: 1px;
   cursor: url("img/Cursor107.cur"), pointer;
+}
 
+.terminal-content .terminal-buttons .minimize { 
+  background-image: url('img/minimize.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  cursor: url('img/Cursor107.cur'), pointer;
+}
+
+.terminal-content .terminal-buttons .closeOut { 
+  background-image: url('img/closeOut.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+  cursor: url('img/Cursor107.cur'), pointer;
 }
 
 .terminal-content .terminal-options { 
@@ -756,31 +829,6 @@ html, body {
     border-color: tranparent;
   }
 }
-
-/* Clippy */
-/* #clippy img { 
-  position: relative; 
-  right: 15px;
-  bottom: 80px;
-  padding: 0px;
-  margin: 0px;
-}
-
-#clippy .clippy-message { 
-  position: relative;
-  right: 80px;
-  bottom: 150px;
-  text-align: center;
-}
-
-.clippy-message .clippy-message-text { 
-  position: absolute; 
-  right: 150px;
-  bottom: 150px;
-  font-size: 20px;
-}
-
-
 
 /* Taskbar */
 footer #taskbar { 
@@ -1263,9 +1311,28 @@ footer #taskbar {
 }
 
 .credits-content .credits-buttons { 
-  padding: 3px;
+  margin-top: 1px;
   cursor: url("img/Cursor107.cur"), pointer;
 
+}
+
+.credits-content .credits-buttons .minimize { 
+  background-image: url('img/minimize.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  cursor: url('img/Cursor107.cur'), pointer;
+}
+
+.credits-content .credits-buttons .closeOut { 
+  background-image: url('img/closeOut.png'); 
+  height: 18px;
+  width: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+  cursor: url('img/Cursor107.cur'), pointer;
 }
 
 .credits-content .credits-options { 
@@ -1396,17 +1463,18 @@ VERSION */
   .icons {  
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
-    left: 18px;
     height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    left: -1px;
   }
   
   .icons .computer-icon { 
     flex-direction: column;
     text-align: center;
     color: #FFFFFF; 
-    margin-right: 20px;
     height: 120px;
   }
 
@@ -1419,7 +1487,6 @@ VERSION */
     flex-direction: column;
     text-align: center;
     color: #FFFFFF; 
-    margin-right: 20px;
   }
   
   .aboutme-icon p { 
@@ -1431,7 +1498,6 @@ VERSION */
     flex-direction: column;
     text-align: center;
     color: #FFFFFF; 
-    margin-right: 10px;
   }
   
   .contact-icon p { 
@@ -1443,7 +1509,6 @@ VERSION */
     text-align: center;
     position: relative;
     bottom: 20px;
-    left: 12px;
   }
   
   .resume-icon p { 
@@ -1464,9 +1529,11 @@ VERSION */
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  height: 820px; 
+  height: 580px; 
   width: 320px;
-  top: 120px;
+  left: 50%; 
+  transform: translateX(-50%);
+  top: 20px;
 }
 
 .intro .intro-header { 
@@ -1486,6 +1553,19 @@ VERSION */
 .intro .intro-buttons { 
   position: relative;
   top: 4px;
+}
+
+.intro .intro-buttons .minimize { 
+  display: none;
+}
+
+.intro .intro-buttons .closeOut { 
+  background-image: url('img/closeOut.png');
+  background-size: 25px;
+  height: 25px;
+  width: 28px;
+  background-repeat: no-repeat;
+  position: relative; 
 }
 
 .intro .intro-options { 
@@ -1510,8 +1590,8 @@ VERSION */
 
 .intro .intro-content { 
   background-color:#ffffe1; 
-  width: 310px;
-  height: 724px;
+  width: 300px; 
+  height: 484px;
   display: table;
   margin: 0 auto;
   align-items: center;
@@ -1519,21 +1599,24 @@ VERSION */
   border-left: 2px solid #000000;
   border-right: 2px solid #FFFFFF; 
   border-bottom: 2px solid #FFFFFF; 
+  overflow-y: scroll;
 }
 
 .intro-content .text-content { 
-  width: 300px; 
-  height: 80px; 
+  width: 290px; 
+  height: 460px; 
   position: relative;
   display: flex; 
   flex-direction: column;
   text-align: left;
-  left: 6px;
+  left: 7px;
+  overflow-y: scroll;
 }
 
 .intro-content .text-content h1 { 
-  margin-bottom: 35px;
-  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .text-content p { 
@@ -1543,22 +1626,17 @@ VERSION */
 }
 
 .text-content #rectangle { 
-  width: 300px; 
+  width: 290px; 
 }
 
 .intro-content img { 
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  position: absolute;
-  top: 75px; 
-  right: 20px;
+  display: none;
 }
 
 
 .intro .intro-footer { 
   background-color: var(--grey); 
-  width: 312px; 
+  width: 302px; 
   margin: 0 auto;
   height: 27px;
   border-top: 1px solid var(--darkerGrey); 
@@ -1591,10 +1669,11 @@ VERSION */
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  height: 980px; 
+  height: 580px; 
   width: 320px;
-  top: 120px;
-  left: 26px;
+  left: 50%; 
+  transform: translateX(-50%);
+  top: 20px;
 }
 
 .aboutme-content .aboutme-header { 
@@ -1614,6 +1693,19 @@ VERSION */
 .aboutme-content .aboutme-buttons { 
   position: relative;
   top: 4px;
+}
+
+.aboutme-content .aboutme-buttons .minimize { 
+  display: none;
+}
+
+.aboutme-content .aboutme-buttons .closeOut { 
+  background-image: url('img/closeOut.png');
+  background-size: 25px;
+  height: 25px;
+  width: 28px;
+  background-repeat: no-repeat;
+  position: relative; 
 }
 
 .aboutme-content .aboutme-options { 
@@ -1638,12 +1730,13 @@ VERSION */
 
 .aboutme-content .aboutme-text { 
   width: 300px; 
-  height: 880px;
+  height: 484px;
   position: relative;
   display: flex; 
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   left: 6px;
+  overflow-y: scroll;
 }
 
 .aboutme-content .aboutme-text h1 { 
@@ -1662,7 +1755,7 @@ VERSION */
 
 .aboutme-content .aboutme-footer { 
   background-color: var(--grey); 
-  width: 303px; 
+  width: 302px; 
   margin: 0 auto;
   height: 27px;
   border-top: 1px solid var(--darkerGrey); 
@@ -1671,7 +1764,7 @@ VERSION */
   border-right: 1px solid #FFFFFF;
   margin-top: 2px;
   position: relative;
-  left: -3px;
+  left: -2px;
 }
 
 .aboutme-footer .aboutme-footer-content { 
@@ -1697,11 +1790,11 @@ VERSION */
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  height: 650px; 
+  height: 580px; 
   width: 320px;
-  top: 120px;
-  left: 26px;
-  margin-bottom: 100px;
+  left: 50%; 
+  transform: translateX(-50%);
+  top: 20px;
 }
 
 .contact-content .contact-header { 
@@ -1721,6 +1814,19 @@ VERSION */
 .contact-content .contact-buttons { 
   position: relative;
   top: 4px;
+}
+
+.contact-content .contact-buttons .minimize { 
+  display: none;
+}
+
+.contact-content .contact-buttons .closeOut { 
+  background-image: url('img/closeOut.png');
+  background-size: 25px;
+  height: 25px;
+  width: 28px;
+  background-repeat: no-repeat;
+  position: relative; 
 }
 
 .contact-content .contact-options { 
@@ -1743,11 +1849,16 @@ VERSION */
   background-color: var(--grey);
 }
 
+.contact-content .contact-redirects { 
+  overflow-y: scroll;
+}
+
 .contact-content .contact-redirects .contact-icons { 
   display: flex; 
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 10px;
+  height: 484px;
 }
 
 .contact-redirects .contact-icons { 
@@ -1755,11 +1866,14 @@ VERSION */
   flex-direction: row;
   justify-content: space-around;
   margin: 3px;
+  overflow-y: scroll;
 }
 
 .contact-footer .contact-footer-content { 
   display: flex;
   justify-content: space-between;
+  position: relative;
+  overflow-y: scroll;
 }
 
 .contact-footer-content p { 
@@ -1782,46 +1896,39 @@ VERSION */
 .contact-redirects .mail { 
   align-items: center;
   text-align: center;
-  padding: 0;
+  margin-top: 35px;
 }
 
 .mail a { 
   color: #000000; 
   text-decoration: none;
   font-size: 24px;
-  padding: 0;
 }
 
 .contact-redirects .linkedin { 
   align-items: center;
   text-align: center;
-  padding: 0;
 }
 
 .linkedin a { 
   color: #000000; 
   text-decoration: none;
   font-size: 24px;
-  padding: 0;
 }
 
 .contact-redirects .github { 
   align-items: center;
   text-align: center;
-  padding: 0;
 }
 
 .github a { 
   color: #000000; 
   text-decoration: none;
   font-size: 24px;
-  padding: 0;
 }
 
 .contact-text p { 
   font-size: 20px;
-  margin: 0;
-  padding: 0;
 }
 
 
@@ -1837,7 +1944,7 @@ VERSION */
   margin-top: 2px;
   position: relative;
   left: -1px;
-  top: -4px;
+  top: -9px;
 }
 
 .contact-footer .contact-footer-content { 
@@ -1865,8 +1972,9 @@ VERSION */
   background-color: var(--grey);
   height: 297px; 
   width: 320px;
-  top: 50px;
-  left: 25px;
+  left: 50%; 
+  transform: translateX(-50%);
+  top: 20px;
 }
 
 .credits-content .credits-header { 
@@ -1888,6 +1996,18 @@ VERSION */
   top: 4px;
 }
 
+.credits-content .credits-buttons .minimize { 
+  display: none;
+}
+
+.credits-content .credits-buttons .closeOut { 
+  background-image: url('img/closeOut.png');
+  background-size: 25px;
+  height: 25px;
+  width: 28px;
+  background-repeat: no-repeat;
+  position: relative; 
+}
 .credits-content .credits-options { 
   background-color: var(--grey); 
   height: 18px;
@@ -1962,6 +2082,8 @@ VERSION */
 /* Taskbar */
 #taskbar { 
   position: fixed;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #taskbar .startButton { 
@@ -2021,6 +2143,18 @@ VERSION */
   top: 4px;
 }
 
+.terminal-content .terminal-buttons .minimize { 
+  display: none;
+}
+
+.terminal-content .terminal-buttons .closeOut { 
+  background-image: url('img/closeOut.png');
+  background-size: 25px;
+  height: 25px;
+  width: 28px;
+  background-repeat: no-repeat;
+  position: relative; 
+}
 .terminal-content .terminal-options { 
   background-color: var(--grey); 
   height: 18px;
