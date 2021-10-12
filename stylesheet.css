@@ -96,7 +96,7 @@ html, body {
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  margin-bottom: 120px;
+  bottom: 120px;
 }
 
 .intro .intro-header { 
@@ -394,6 +394,7 @@ html, body {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
+  cursor: url('img/Cursor107.cur'), pointer;
 }
 
 .contact-header p { 
@@ -1533,7 +1534,6 @@ MOBILE VERSION */
   width: 320px;
   left: 50%; 
   transform: translateX(-50%);
-  top: 10px;
 }
 
 .intro .intro-header { 
