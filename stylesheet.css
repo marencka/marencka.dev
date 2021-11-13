@@ -90,6 +90,7 @@ html, body {
 .intro { 
   position: fixed;
   left: 50%;
+  top: 10%;
   transform: translate(-50%, 0);
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
@@ -237,7 +238,7 @@ html, body {
 .aboutme-content { 
   position: absolute; 
   width: 600px; 
-  height: 580px;
+  height: 720px;
   right: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
@@ -340,6 +341,10 @@ html, body {
 
 .aboutme-text .projects { 
   margin-top: 20px;
+}
+
+.aboutme-content .aboutme-text .project-title a { 
+  color: #0808a9; 
 }
 
 .aboutme-content .aboutme-footer { 
