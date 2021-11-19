@@ -1558,6 +1558,9 @@ MOBILE VERSION */
 .intro .intro-buttons { 
   position: relative;
   top: 4px;
+  height: 24px; 
+  width: 27px;
+  right: 4px;
 }
 
 .intro .intro-buttons .minimize { 
@@ -1698,6 +1701,9 @@ MOBILE VERSION */
 .aboutme-content .aboutme-buttons { 
   position: relative;
   top: 4px;
+  height: 24px; 
+  width: 27px;
+  right: 4px;
 }
 
 .aboutme-content .aboutme-buttons .minimize { 
@@ -1819,6 +1825,9 @@ MOBILE VERSION */
 .contact-content .contact-buttons { 
   position: relative;
   top: 4px;
+  height: 24px; 
+  width: 27px;
+  right: 4px;
 }
 
 .contact-content .contact-buttons .minimize { 
@@ -2002,6 +2011,9 @@ MOBILE VERSION */
 .credits-content .credits-buttons { 
   position: relative;
   top: 4px;
+  height: 24px; 
+  width: 27px;
+  right: 4px;
 }
 
 .credits-content .credits-buttons .minimize { 
@@ -2150,6 +2162,9 @@ MOBILE VERSION */
 .terminal-content .terminal-buttons { 
   position: relative;
   top: 4px;
+  height: 24px; 
+  width: 27px;
+  right: 4px;
 }
 
 .terminal-content .terminal-buttons .minimize { 
