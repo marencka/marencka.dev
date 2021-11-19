@@ -163,7 +163,7 @@ html, body {
 .intro .intro-content { 
   background-color:#ffffe1; 
   width: 588px;
-  height: 570px;
+  height: 580px;
   display: table;
   margin: 0 auto;
   align-items: center;
@@ -1535,10 +1535,10 @@ MOBILE VERSION */
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  height: 480px; 
+  height: 450px; 
   width: 320px;
-  left: 50%; 
   transform: translateX(-50%);
+  top: 3px;
 }
 
 .intro .intro-header { 
@@ -1596,7 +1596,7 @@ MOBILE VERSION */
 .intro .intro-content { 
   background-color:#ffffe1; 
   width: 300px; 
-  height: 340px;
+  height: 300px;
   margin: 0 auto;
   align-items: center;
   border-top: 2px solid #000000;
@@ -1608,7 +1608,7 @@ MOBILE VERSION */
 
 .intro-content .text-content { 
   width: 290px; 
-  height: 365px; 
+  height: 335px; 
   position: relative;
   display: flex; 
   flex-direction: column;
@@ -1674,7 +1674,7 @@ MOBILE VERSION */
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  height: 480px; 
+  height: 450px; 
   width: 320px;
   left: 50%; 
   transform: translateX(-50%);
@@ -1735,7 +1735,7 @@ MOBILE VERSION */
 
 .aboutme-content .aboutme-text { 
   width: 300px; 
-  height: 384px;
+  height: 354px;
   position: relative;
   display: flex; 
   flex-direction: column;
@@ -1795,7 +1795,7 @@ MOBILE VERSION */
   border-bottom: 2px solid var(--darkerGrey);
   border-right: 2px solid var(--darkerGrey);
   background-color: var(--grey);
-  height: 480px; 
+  height: 440px; 
   width: 320px;
   left: 50%; 
   transform: translateX(-50%);
@@ -1875,6 +1875,8 @@ MOBILE VERSION */
   overflow-y: scroll;
 }
 
+
+
 .contact-footer .contact-footer-content { 
   display: flex;
   justify-content: space-between;
@@ -1950,7 +1952,7 @@ MOBILE VERSION */
   margin-top: 2px;
   position: relative;
   left: -1px;
-  top: 23px;
+  bottom: 18px;
 }
 
 .contact-footer .contact-footer-content { 
