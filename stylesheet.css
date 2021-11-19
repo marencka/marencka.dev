@@ -1538,7 +1538,7 @@ MOBILE VERSION */
   height: 450px; 
   width: 320px;
   transform: translateX(-50%);
-  top: 3px;
+  top: 9%;
 }
 
 .intro .intro-header { 
@@ -1681,7 +1681,7 @@ MOBILE VERSION */
   width: 320px;
   left: 50%; 
   transform: translateX(-50%);
-  top: 10px;
+  top: 9%;
 }
 
 .aboutme-content .aboutme-header { 
@@ -1805,7 +1805,7 @@ MOBILE VERSION */
   width: 320px;
   left: 50%; 
   transform: translateX(-50%);
-  top: 10px;
+  top: 9%;
 }
 
 .contact-content .contact-header { 
@@ -1991,7 +1991,7 @@ MOBILE VERSION */
   width: 320px;
   left: 50%; 
   transform: translateX(-50%);
-  top: 20px;
+  top: 9%;
 }
 
 .credits-content .credits-header { 
@@ -2135,7 +2135,7 @@ MOBILE VERSION */
   width: 350px;
   left: 50%; 
   transform: translateX(-50%);
-  top: 20px;
+  top: 9%;
 }
 
 .terminal-content .terminal-header { 
