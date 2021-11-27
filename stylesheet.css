@@ -238,7 +238,7 @@ html, body {
 .aboutme-content { 
   position: absolute; 
   width: 600px; 
-  height: 720px;
+  height: 740px;
   right: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
@@ -352,7 +352,7 @@ html, body {
   width: 590px; 
   margin: 0 auto;
   position: absolute; 
-  bottom: 1px;
+  bottom: 0px;
   left: 3px;
   height: 27px;
   border-top: 1px solid var(--darkerGrey); 
