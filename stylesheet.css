@@ -1532,7 +1532,7 @@ footer #taskbar {
   width: 800px; 
   height: 510px;
   left: 30%;
-  bottom: 40%;
+  bottom: 30%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
