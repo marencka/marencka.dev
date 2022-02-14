@@ -1531,7 +1531,8 @@ footer #taskbar {
   margin: 0 auto;
   width: 800px; 
   height: 510px;
-  left: 40%;
+  left: 30%;
+  bottom: 40%;
   border-top: 2px solid #FFFFFF; 
   border-left: 2px solid #FFFFFF;
   border-bottom: 2px solid var(--darkerGrey);
@@ -1751,7 +1752,7 @@ footer #taskbar {
 .job-content { 
   display: none;
   position: absolute; 
-  bottom: 200px;
+  bottom: 170px;
   width: 600px; 
   height: 650px;
   left: 40%;
