@@ -1,3 +1,5 @@
+
+
 var clock = setInterval(function clock() {
 
   const date = new Date();
@@ -22,6 +24,14 @@ function showIntro() {
   } else {
     x.style.display = 'none';
   }
+}
+
+function closeJob() {
+  document.getElementById('job-content').style.display = 'none';
+}
+
+function closeUpdate() { 
+  document.getElementById('update-content').style.display = "none";
 }
 
 function showAboutMe() {
@@ -65,6 +75,18 @@ function openResume() {
   return false;
 }
 
+function openLoading() { 
+  document.getElementById('loading-content').style.display = 'block'; 
+  document.getElementById('update-content').style.display = 'none';     
+  
+  setTimeout(function() {
+    document.getElementById('loading-content').style.display = 'none';
+    document.getElementById('job-content').style.display = 'block';
+  }, 7000); 
+}
+
+
+
 function showStart() {
   var x = document.getElementById('startmenu');
   if (x.style.display === 'none') {
@@ -73,3 +95,4 @@ function showStart() {
     x.style.display = 'none';
   }
 }
+

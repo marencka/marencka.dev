@@ -13,7 +13,7 @@
 </head>
 
 <body onload="clock()">
-  
+
 
   <div class="icons">
     <div class="computer-icon" onclick="showIntro()" id="computer-icon">
@@ -35,9 +35,8 @@
     </div>
 
     <div class="resume-icon" id="resume-icon" onclick="openResume()">
-     <input type=image src="img/resume.png" name="resume-icon"
-          alt="Purple book with a yellow question mark on it">
-        <p>Resume</p>
+      <input type=image src="img/resume.png" name="resume-icon" alt="Purple book with a yellow question mark on it">
+      <p>Resume</p>
       </a>
     </div>
   </div>
@@ -68,17 +67,18 @@
         <p>I'm currently a senior at UNC-Chapel Hill studying Computer Science and German.
           <br>
           <br>
-          My story started out in medicine as a biochemistry premed major. After working in the 
-          emergency department for two years, I realized that I loved science more than healthcare. 
+          My story started out in medicine as a biochemistry premed major. After working in the
+          emergency department for two years, I realized that I loved science more than healthcare.
           Around this time, I started the process of building a gaming computer. It was here I identified
           my love for technology.
           <br>
-          <br> 
-          <div id="rectangle">
-          Despite never reading a line of code in my life, a terrible education in math, and no understanding of 
-          what computer science entailed -- I decided to take a leap of faith and switch my major to computer science. 
+          <br>
+        <div id="rectangle">
+          Despite never reading a line of code in my life, a terrible education in math, and no understanding of
+          what computer science entailed -- I decided to take a leap of faith and switch my major to computer science.
           Here I found my passion for computational logic and power.
-          I have a deep interest in machine learning, natural language processing, chaos engineering, and algorithmic efficiency.
+          I have a deep interest in machine learning, natural language processing, chaos engineering, and algorithmic
+          efficiency.
           <br>
           <br>
           I am currently looking for a New Grad May 2022 full-time position.</p>
@@ -104,7 +104,7 @@
       <p>projects.txt
       </p>
       <div class="aboutme-buttons" onclick="closeOutAboutMe()">
-        <button class="minimize" onclick="closeOutAboutMe()" aria-label="Minimize button" ></button>
+        <button class="minimize" onclick="closeOutAboutMe()" aria-label="Minimize button"></button>
         <button class="closeOut" onclick="closeOutAboutMe()" aria-label="Close out button"></button>
       </div>
     </div>
@@ -155,7 +155,9 @@
           </ul>
         </li>
 
-        <li class="project-title"><a href="https://play.google.com/store/apps/details?id=appinventor.ai_julielynn_wong.TS_19b_Oct_2021&hl=en_US&gl=US"><em>Thermocoagulator Simulator App</em></a>
+        <li class="project-title"><a
+            href="https://play.google.com/store/apps/details?id=appinventor.ai_julielynn_wong.TS_19b_Oct_2021&hl=en_US&gl=US"><em>Thermocoagulator
+              Simulator App</em></a>
           <ul>
             <li class="projects">
               Published android app on the Google Play store that allows health care professionals to train with a probe
@@ -167,8 +169,8 @@
 
         <li class="project-title"><em>Machine Learning Book Recommender</em>
           <ul>
-            <li class="projects">Currently working on a machine 
-              learning algorithm that uses logistic regression and 
+            <li class="projects">Currently working on a machine
+              learning algorithm that uses logistic regression and
               decision tree learning to provide accurate book recommendations.
             </li>
           </ul>
@@ -218,8 +220,8 @@
         </div>
 
         <div class="linkedin">
-          <a href="https://www.linkedin.com/in/alexisdanz/" rel="noreferrer" target="_blank"><input height="100" width="100" type=image
-              src="img/linkedin.png" name="linkedin-icon" alt="Digitized linkedin icon">
+          <a href="https://www.linkedin.com/in/alexisdanz/" rel="noreferrer" target="_blank"><input height="100"
+              width="100" type=image src="img/linkedin.png" name="linkedin-icon" alt="Digitized linkedin icon">
             <p>LinkedIn</p>
           </a>
         </div>
@@ -242,7 +244,7 @@
     </div>
   </div>
 
-<!-- Credits -->
+  <!-- Credits -->
   <div class="credits-content" id="credits-content" style="display:none;">
     <div class="credits-header" id="credits-header">
       <p>credits.txt</p>
@@ -277,6 +279,133 @@
 
     <div class="credits-footer">
       <div class="credits-footer-content">
+        <p>2 object(s)</p>
+        <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+      </div>
+    </div>
+  </div>
+
+  <div class="update-content" id="update-content">
+    <div class="update-header" id="update-header">
+      <p>Windows 98 CD-ROM</p>
+      <div class="update-buttons">
+        <button class="minimize" onclick="closeUpdate()" aria-label="minimize button"></button>
+        <button class="closeOut" onclick="closeUpdate()" aria-label="close out button"></button>
+      </div>
+    </div>
+
+    <div class="update-info">
+      <div class="update-icon">
+        <img src="img/x.png" alt="Question mark in a message bubble">
+      </div>
+
+      <div class="update-text">
+        <p>The CD-ROM contains a newer version of Windows than the one you are primarily using.
+          <br>
+          <br>
+          Would you like to upgrade your computer to this new version of Windows 98 now?
+        </p>
+      </div>
+
+    </div>
+
+    <div class="update-options">
+      <button onclick="openLoading()" class="update-yes">
+        <div class="yes-border"><u>Y</u>es</div>
+      </button>
+      <button>
+        <u>N</u>o</button>
+      <button>Cancel</button>
+    </div>
+  </div>
+
+  <div class="loading-content" id="loading-content" style="display: none">
+    <div class="loading-header">
+      <p>Windows 98 Second Edition Service Pack 3</p>
+      <div class="loading-buttons">
+        <button class="minimize" onclick="closeLoading()" aria-label="minimize button"></button>
+        <button class="closeOut" onclick="closeLoading()" aria-label="close out button"></button>
+      </div>
+    </div>
+
+    <div class="loading-partition"></div>
+
+    <div class="loading-image">
+      <img width="700px" src="img/loading.PNG" alt="Microsoft 98 Second Edition Service Pack">
+    </div>
+
+    <div class="loading-text">
+      <p>Initializing... Please wait...</p>
+      <div class="loading">
+        <p id="loading-insert">Loading...:</p>
+      </div>
+    </div>
+
+    <div class="loading-progressBar">
+      <div class="progressBar"></div>
+    </div>
+
+    <div class="loading-separator">
+
+    </div>
+
+    <div class="loading-button">
+      <button onclick="closeLoading()">
+        <div class="cancel-border"><u>C</u>ancel</div>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="job-content" id="job-content">
+    <div class="job-header" id="job-header">
+      <p>update.txt</p>
+      <div class="job-buttons" onclick="closeJob()">
+        <button class="minimize" onclick="closeJob()" aria-label="Minimize button"></button>
+        <button class="closeOut" onclick="closeJob()" aria-label="Close out button"></button>
+      </div>
+    </div>
+
+    <div class="job-options">
+      <p><u>F</u>ile</p>
+      <br>
+      <p><u>E</u>dit </p>
+      <p><u>V</u>iew </p>
+      <p><u>O</u>ptions </p>
+      <p><u>H</u>elp </p>
+    </div>
+
+    <div class="job-separator"></div>
+
+
+    <div class="job-info">
+      <div class="job-image">
+        <img src="img/balloons.png" class="balloons" height="100px" width="80px" alt="pixel art balloons">
+        <img src="img/microsoft.jpg" class="msft" height="200px" width="350px" alt="Image of microsoft building">
+        <img src="img/balloons.png" class="balloons" height="100px" width="80px"  alt="pixel art balloons">
+      </div>
+
+      <div class="job-text">
+        <h2>I'm excited to announce I will be working at Microsoft as a software engineer after graduation!</h2>
+        <p>Microsoft has been a dream company of mine since I started studying computer science. I grew up using Microsoft products and
+          Windows 98 was the operating system of the first computer. I learned to love technology through Microsoft products and that is why it is a 
+           dream come true to work here. To work on such influential products, to work with amazing engineers, and
+           to work at a truly impactful company.
+
+          <br> <br> 
+
+          I am so grateful for this opportunity. I wouldn't be here if it wasn't for my friends, family, and mentors. 
+          I want to say a heartfelt thank you to them for their support, love, advice, kindness, and encouragement. 
+          I wouldn't be here if it wasn't for you.
+
+          <br> <br>
+          Thank you to the team at Microsoft for believing in me and providing me this opportunity. I can't wait to get started.
+        </p>
+      </div>
+    </div>
+
+    <div class="jobs-footer">
+      <div class="jobs-footer-content">
         <p>2 object(s)</p>
         <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
       </div>
@@ -323,7 +452,8 @@
       </div>
 
       <div class="resumeIcon" id="resumeIcon" onclick="openResume()">
-        <input type=image src="img/resume.png" onclick="openResume()" name="resume-icon" alt="Purple book with a yellow question mark on it">
+        <input type=image src="img/resume.png" onclick="openResume()" name="resume-icon"
+          alt="Purple book with a yellow question mark on it">
         <p onclick="openResume()">Resume</p>
       </div>
 
@@ -336,11 +466,13 @@
       </div>
 
       <div class="shutDown" onclick="showTerminal()">
-        <input type="image" onclick="showTerminal()" src="img/shutdown.png" width="52" height="52" alt="computer with a blue screen">
+        <input type="image" onclick="showTerminal()" src="img/shutdown.png" width="52" height="52"
+          alt="computer with a blue screen">
         <p onclick="showTerminal()">Sh<u>u</u>t down</p>
       </div>
     </div>
   </div>
+
 
   <!-- Terminal -->
   <div class="terminal-content" id="terminal-content" style="display: none;">
@@ -401,8 +533,8 @@
       </div>
 
       <div onclick="showIntro()" class="intro-button">
-        <input type="image" height="32px" value="intro-button" src="img/internet.png"
-          name="intro-button" alt="internet explorer icon">
+        <input type="image" height="32px" value="intro-button" src="img/internet.png" name="intro-button"
+          alt="internet explorer icon">
         <p>welcome.html</p>
       </div>
 
@@ -417,66 +549,71 @@
     </div>
   </footer>
   <!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script>
-<!-- / Fathom -->
+  <!-- <script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script> -->
+  <!-- / Fathom -->
 
-<script>
-  dragElement(document.getElementById("intro"));
-dragElement(document.getElementById('aboutme-content'));
-dragElement(document.getElementById('contact-content'));
-dragElement(document.getElementById('credits-content'));
-dragElement(document.getElementById('terminal-content'));
+  <script>
+    dragElement(document.getElementById("intro"));
+    dragElement(document.getElementById('aboutme-content'));
+    dragElement(document.getElementById('contact-content'));
+    dragElement(document.getElementById('credits-content'));
+    dragElement(document.getElementById('terminal-content'));
+    dragElement(document.getElementById('loading-content')); 
+    dragElement(document.getElementById('update-content')); 
+    dragElement(document.getElementById('job-content')); 
+
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "-header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+    document.addEventListener('mouseup', function (e) {
+      var container = document.getElementById('startmenu');
+      if (!container.contains(e.target)) {
+        container.style.display = 'none';
+      }
+    });
 
 
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "-header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-
-document.addEventListener('mouseup', function (e) {
-var container = document.getElementById('startmenu');
-if (!container.contains(e.target)) {
-container.style.display = 'none';
-}
-});
-</script>
+  </script>
 </body>
 
 </html>
