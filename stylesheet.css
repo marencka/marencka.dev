@@ -1427,6 +1427,7 @@ footer #taskbar {
 /* Update */
 .update-content {
   position: absolute; 
+  margin: 0 auto;
   width: 680px; 
   height: 180px;
   left: 40%;
@@ -1527,6 +1528,7 @@ footer #taskbar {
 /* Loading bar */
 .loading-content {
   position: absolute; 
+  margin: 0 auto;
   width: 800px; 
   height: 510px;
   left: 40%;
@@ -1749,6 +1751,7 @@ footer #taskbar {
 .job-content { 
   display: none;
   position: absolute; 
+  bottom: 200px;
   width: 600px; 
   height: 650px;
   left: 40%;
