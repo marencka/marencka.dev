@@ -30,7 +30,7 @@ function closeJob() {
   document.getElementById('job-content').style.display = 'none';
 }
 
-function closeUpdate() { 
+function closeUpdate() {
   document.getElementById('update-content').style.display = "none";
 }
 
@@ -50,11 +50,11 @@ function showCredits() {
   document.getElementById('credits-content').style.display = 'block';
 }
 
-function closeOutCredits() { 
+function closeOutCredits() {
   document.getElementById('credits-content').style.display = 'none';
 }
 
-function closeOutTerminal() { 
+function closeOutTerminal() {
   document.getElementById('terminal-content').style.display = 'none';
 }
 
@@ -70,22 +70,51 @@ function closeOutContact() {
   document.getElementById('contact-content').style.display = 'none';
 }
 
-function openResume() { 
-  window.open('src/alexisdanzresume.pdf', '_blank'); 
+function closeOutLogin() {
+  document.querySelector('.login-content').style.display = 'none';
+}
+
+function openResume() {
+  window.open('src/alexisdanzresume.pdf', '_blank');
   return false;
 }
 
-function openLoading() { 
-  document.getElementById('loading-content').style.display = 'block'; 
-  document.getElementById('update-content').style.display = 'none';     
-  
-  setTimeout(function() {
+function openLoading() {
+  document.getElementById('loading-content').style.display = 'block';
+  document.getElementById('update-content').style.display = 'none';
+
+  setTimeout(function () {
     document.getElementById('loading-content').style.display = 'none';
     document.getElementById('job-content').style.display = 'block';
-  }, 7000); 
+  }, 7000);
 }
 
+function openPasswordDialog() {
+  document.querySelector('.login-content').style.display = 'block';
+}
 
+function checkPassword() {
+  var passwordTextarea = document.querySelector(".password");
+  var loginContent = document.querySelector('.login-content');
+  var applicationContent = document.querySelector(".application-content");
+
+  if (passwordTextarea.value == null) {
+    return;
+  }
+
+  if (passwordTextarea.value == "delay-200") {
+    loginContent.style.display = "none";
+    applicationContent.style.display = "block";
+  }
+}
+
+function closeOutApplication() {
+  var applicationContent = document.querySelector(".application-content");
+
+  if (applicationContent) {
+    applicationContent.style.display = "none";
+  }
+}
 
 function showStart() {
   var x = document.getElementById('startmenu');

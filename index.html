@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="stylesheet.css" rel="stylesheet">
   <title>Alexis Danz</title>
-  <meta name="description" content="A Windows '98 themed personal website for Alexis Danz">
+  <meta name="description" content="A Windows 98 themed personal website for Alexis Danz">
   <link rel="shortcut icon" href="img/favicon.ico">
   <script src="js/script.js"></script>
 </head>
@@ -39,6 +39,11 @@
       <p>Resume</p>
       </a>
     </div>
+
+    <div class="tailwind" onclick="openPasswordDialog()">
+      <img class="tailwind-icon" src="img/tailwind_application.png" alt="Paper with the letter A on it">
+      <p>Tailwind Application</p>
+    </div>
   </div>
 
   <div class="intro" id="intro">
@@ -63,20 +68,21 @@
     <div class="intro-content">
       <br>
       <div class="text-content">
-        <h1>Hi! I'm Alexis.</h1>
-        <p>I'm currently a software engineer at Microsoft. 
+        <span class="head">Hi! I'm Alexis.</span>
+        <p>I'm currently a software engineer at Microsoft working on <a class="des_lnk"
+            href="https://www.bing.com/create" target="_blank">Designer</a>.
           <br>
           <br>
-          My path to technology has been untraditional. I didn't 
-          know what coding/computer science entailed until my junior year
+          My path to technology was untraditional. I didn't
+          know what coding or computer science was until my junior year
           of college. Despite it all, I was able to graduate from UNC-Chapel Hill
           with a degree in computer science and a new grad position at Microsoft.
           <br>
           <br>
         <div id="rectangle">
-          My interests lay in NLP, ML, chaos-engineering, and algorithmic efficiency. 
+          My interests lay in design, UX-research, accessibility, and machine learning.
           <br>
-        </p>
+          </p>
         </div>
       </div>
       <img src="img/avatar.png" height="40" width="40" alt="A picture of me!">
@@ -89,8 +95,6 @@
       </div>
     </div>
   </div>
-
-
 
   <!-- ABOUT ME FILE -->
   <div class="aboutme-content" id="aboutme-content" style="display: none;">
@@ -130,12 +134,10 @@
           </ul>
         </li>
 
-        <li class="project-title"><em>Sunset Chaser </em>
+        <li class="project-title"><em>Himmel</em>
           <ul>
-            <li class="projects">Utilizing the OpenWeatherAPI and a
-              mathematic equation to factor
-              various weather components to
-              calculate how vivid a sunset will be. </li>
+            <li class="projects">Utilizing the Apple WeatherKit and a recurrent neural network to provide a predictive
+              score for that day's sunrise or susnet. </li>
           </ul>
         </li>
 
@@ -181,8 +183,6 @@
       </div>
     </div>
   </div>
-
-
 
   <!-- CONTACT FILE -->
   <div class="contact-content" id="contact-content" style="display: none;">
@@ -380,6 +380,213 @@
     </div>
   </div>
 
+  <!-- TAILWIND LOGIN DIALOG -->
+  <div class="login-content" id="login-content" style="display: none;">
+    <div class="login-header" id="login-header">
+      <p class="tit">Enter Network Password</p>
+      <div class="login-buttons" onclick="closeOutLogin()">
+        <img src="img/minimize.png" class="minimize" onclick="closeOutLogin()" aria-label="Minimize button"></button>
+        <img src="img/closeOut.png" class="closeOut" onclick="closeOutLogin()" aria-label="Close out button"></button>
+      </div>
+    </div>
+
+    <div class="contact-separator"></div>
+
+    <div class="content">
+      <img src="img/login.png" class="login-img" aria-label="Two computers connecting">
+
+      <div class="form-content">
+        <div class="txt_cont">
+          <span class="header">Enter your network password to access Tailwind Application</span>
+        </div>
+
+        <div class="login-form">
+          <div class="username_info">
+            <span class="label"><u>U</u>sername:</span>
+            <span class="username">TailwindHiring</span>
+          </div>
+
+          <div class="pass_info">
+            <span class="hint">Hint: What Tailwind CSS class do I use to delay an animation by 200 milliseconds?</span>
+            <div class="pass_form">
+              <span class="label"><u>P</u>assword:</span>
+              <textarea class="password"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="login_btn">
+        <button id="login" onClick="checkPassword()">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT ME FILE -->
+  <div class="application-content" id="aboutme-content" style="display: none;">
+
+    <div class="application-header" id="aboutme-header">
+      <p>application.txt</p>
+      <div class="application-buttons" onclick="closeOutApplication()">
+        <img src="img/minimize.png" class="minimize" onclick="closeOutApplication()"
+          aria-label="Minimize button"></button>
+        <img src="img/closeOut.png" class="closeOut" onclick="closeOutApplication()"
+          aria-label="Close out button"></button>
+      </div>
+    </div>
+
+    <div class="application-options">
+      <p><u>F</u>ile</p>
+      <br>
+      <p><u>E</u>dit </p>
+      <p><u>V</u>iew </p>
+      <p><u>O</u>ptions </p>
+      <p><u>H</u>elp </p>
+    </div>
+
+    <div class="application-separator"></div>
+
+    <div class="application-text">
+      <div class="first_pg">
+        <div class="first_pg_txt">
+          <h1 class="title"># Hello!</h1>
+          <span class="body">
+            Welcome to my application for the Design Engineer position at Tailwind Labs.
+            <br>
+            <br>
+          </span>
+        </div>
+      </div>
+
+      <div class="second_pg">
+        <span class="header">## Who am I?</span>
+        <br>
+        <br>
+        <span class="body">
+          I am currently a developer and designer living in the Pacific Northwest around the Seattle area. I am an avid
+          reader, tinkerer, knitter and sports fan. In my free time I like to work on my passion project, Himmel, and go
+          on long walks.
+        </span>
+      </div>
+
+      <div class="third_pg">
+        <span class="header">## My story</span>
+        <br>
+        <br>
+        <div class="content">
+          <span class="body">
+            Growing up in rural Montana, I had little access to proper STEM education and had no conception of what
+            computer science or software engineering entailed. The stable computer and internet connection in my early
+            years came from the public libraries archaic computer that ran Windows 98, and from here, I fell in love
+            with
+            technology.
+            <br>
+            <br>
+            I arrived at UNC-Chapel Hill as a biochemistry major and worked at the emergency department at night
+            for 2.5 years. While I loved the science in medicine, I struggled with the intracacies of the American
+            healthcare system. During my various night shifts, I stumbled upon a Reddit thread on how to build your own
+            computer. I was hooked. I began saving up for parts that night.
+            <br>
+            <br>
+            After the joy of building my computer and my frustration with American healthcare, I decided to change my
+            major to Computer Science at the last minute as a Junior. I did not know a line of code or anything about
+            software engineering, I just had a gut <em>feeling</em> this was the right path for me.
+            <br>
+            <br>
+            At the end of my senior year, after stuffing my schedule to the brim with computer science classes, I
+            realized
+            it was time to build something. I built this website in homage to the first computer I fell in love with at
+            the public library. This website was my passion project and ultimately caught the eyes of Microsoft, where I
+            ended up accepting a position.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="third_pg">
+        <span class="header">## My work</span>
+        <br>
+        <br>
+        <span class="body">
+          Currently, I work as the lead front-end engineer for <a href="https://www.bing.com/create" target="_blank"
+            class="des_lnk">Designer</a>--a web application that leverages the OpenAI DALL-E model to generate images
+          from natural language input. I began working on Designer in late 2022, pre-launch, as the sole front-end
+          engineer. I took it to over 5 billion images created and 3 million daily users. We even were a part of a <a
+            class="superbowl" target="_blank" href="https://www.youtube.com/watch?v=SaCVSUbYpVc">superbowl
+            commercial!</a>
+          <br>
+          <br>
+          Additionally, due to lack of team resources, I am also the only UX/UI designer for this product. Due to this
+          unique
+          position of designer & engineer, I have become obsessive about design. My role has honed my attention to
+          detail, earning me the nickname “pixel stickler” on my team.
+          <br>
+          <br>
+          As Designer gained popularity I lead the technical onboarding of several partner groups across the
+          organization such as SwiftKey and Skype. Ultimately, I integrated the customer-facing experience into flagship
+          products such as Bing and Copilot. As I helped integrate these partners I strengthened both my written and
+          verbal communication skills and learned nuance around the differences between communicating to inform and
+          communicating to teach.
+        </span>
+      </div>
+
+      <div class="fourth_pg">
+        <span class="header">## My passion project</span>
+        <br>
+        <br>
+        <span class="body">
+          How does one grade a sunset? Is it the vividity? Vibrance? Should you add extra points for the awe-inspiring
+          clouds? These are some of the questions that I have been toiling with while creating Himmel, an app that
+          predicts sunrise and sunset scores based on weather data using a neural network.
+          <br>
+          <br>
+          Being able to have creative freedom and domain over Himmel has been huge for me. Himmel has allowed me to
+          learn about exciting new technologies such as Three.js, animations, and computational photography. It has also
+          provided me my first hands-on experience with implementing a neural network model and the feature engineering
+          that comes with that.
+          <br>
+          <br>
+          Himmel is my art piece to the world. Like Tailwind, I am not putting revenue first by spamming the user with
+          ugly ads. I want this app to feel like a sunset itself -- understated, quiet, and simple yet beautiful.
+        </span>
+      </div>
+
+      <div class="fifth_pg">
+        <span class="header">## Why this position?</span>
+        <br>
+        <br>
+        <span class="body">
+          I am grateful for the unique skills and experiences that my position at Microsoft has provided, but I am eager
+          to explore a role that offers more creative design freedom. I deeply care about the products I create and
+          strive to have a significant impact on the user experience.
+          <br>
+          <br>
+          I want to have a domain over what I create. I want to be able to polish every pixel, iterate on feedback and
+          be on the forefront of web technology. I want to work for a company that is passionate about the product and
+          its people, not just revenue.
+          <br>
+          <br>
+          I am confident that Tailwind Labs is that company, and I am eager to contribute my skills and experiences to
+          your team.
+          <br>
+          <br>
+          Thank you for considering my application. I look forward to the possibility of working with you and am
+          available to answer any questions you may have.
+          <br>
+          <br>
+          Thank you,
+          <br>
+          Alexis
+      </div>
+
+      <div class="application-footer">
+        <div class="application-footer-content">
+          <p>4 object(s)</p>
+          <img src="img/corner.png" height="15" width="15" alt="corner icon from Windows 2000">
+        </div>
+      </div>
+    </div>
+  </div>
   <footer>
     <div id="taskbar">
       <div class="startButton" onclick="showStart()">
@@ -416,9 +623,6 @@
       </div>
     </div>
   </footer>
-  <!-- Fathom - beautiful, simple website analytics -->
-  <script src="https://cdn.usefathom.com/script.js" data-site="CXEQLDRV" defer></script>
-  <!-- / Fathom -->
 
   <script>
     dragElement(document.getElementById("intro"));
@@ -426,18 +630,14 @@
     dragElement(document.getElementById('contact-content'));
     dragElement(document.getElementById('credits-content'));
     dragElement(document.getElementById('terminal-content'));
-    dragElement(document.getElementById('loading-content')); 
-    dragElement(document.getElementById('update-content')); 
-    dragElement(document.getElementById('job-content')); 
-
+    dragElement(document.getElementById('application-content'));
 
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      console.log(elmnt.id);
       if (document.getElementById(elmnt.id + "-header")) {
-        /* if present, the header is where you move the DIV from:*/
         document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
       } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
         elmnt.onmousedown = dragMouseDown;
       }
 
@@ -478,8 +678,6 @@
         container.style.display = 'none';
       }
     });
-
-
 
   </script>
 </body>
