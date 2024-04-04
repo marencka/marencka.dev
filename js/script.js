@@ -105,6 +105,7 @@ function checkPassword() {
   if (passwordTextarea.value == "delay-200") {
     loginContent.style.display = "none";
     applicationContent.style.display = "block";
+    gtag('event', 'tailwind_app_viewed');
   }
 }
 
