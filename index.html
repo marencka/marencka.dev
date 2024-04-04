@@ -423,7 +423,7 @@
   </div>
 
   <!-- ABOUT ME FILE -->
-  <div class="application-content" id="aboutme-content" style="display: none;">
+  <div class="application-content" id="application-content" style="display: none;">
 
     <div class="application-header" id="aboutme-header">
       <p>application.txt</p>
@@ -634,7 +634,6 @@
 
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      console.log(elmnt.id);
       if (document.getElementById(elmnt.id + "-header")) {
         document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
       } else {
