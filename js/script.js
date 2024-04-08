@@ -105,10 +105,19 @@ function checkPassword() {
   if (passwordTextarea.value == "delay-200") {
     loginContent.style.display = "none";
     applicationContent.style.display = "block";
-    gtag('event', 'button_click', {
-      'event_category': 'User Interaction',
-      'event_label': 'Tailwind App Viewed'
-    });
+
+    const headers = new Headers()
+    headers.append("Content-Type", "application/json")
+    const body = { "application_seen": "true" }
+
+    const options = {
+      method: "POST",
+      headers,
+      mode: "cors",
+      body: JSON.stringify(body),
+    }
+
+    fetch("https://en1trl7cpn3f2.x.pipedream.net/", options)
   }
 }
 
