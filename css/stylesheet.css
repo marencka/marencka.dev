@@ -3,7 +3,12 @@
 
 @font-face {
   font-family: "w95fa";
-  src: url('css/w95fa.woff') format('woff');
+  src: url('w95fa.woff') format('woff');
+}
+
+@font-face {
+  font-family: "claconneu";
+  src: url('claconneu.woff2') format('woff2');
 }
 
 :root {
@@ -11,6 +16,10 @@
   --grey: #BDBEBD;
   --darkerGrey: #979997;
   --lighterGrey: #e6e6e6;
+}
+
+.hide {
+  display: none;
 }
 
 .tailwind {
@@ -34,7 +43,7 @@ body {
   background-color: var(--blueGreen);
   margin: 0 auto;
   font-family: w95fa;
-  cursor: url("img/cursor.png"), auto;
+  cursor: url("../img/cursor.png"), auto;
   height: 100%;
   line-height: 1.28em;
 }
@@ -60,7 +69,7 @@ body {
   position: absolute;
   left: 10px;
   top: 20px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .icons .computer-icon {
@@ -135,37 +144,37 @@ body {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .intro-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .intro .intro-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .intro .intro-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .intro .intro-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .intro .intro-options {
@@ -173,7 +182,7 @@ body {
   height: 18px;
   display: flex;
   justify-content: left;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
@@ -193,7 +202,7 @@ body {
 .intro .intro-content {
   background-color: #ffffe1;
   width: 588px;
-  height: 380px;
+  height: 400px;
   display: table;
   margin: 0 auto;
   align-items: center;
@@ -247,7 +256,7 @@ body {
   border-bottom: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
   padding-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .intro-footer .intro-footer-content {
@@ -289,32 +298,32 @@ body {
 
 .aboutme-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .aboutme-content .aboutme-buttons {
   margin: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .aboutme-content .aboutme-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .aboutme-content .aboutme-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .aboutme-content .aboutme-options {
@@ -322,7 +331,7 @@ body {
   height: 18px;
   display: flex;
   justify-content: left;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
@@ -428,38 +437,38 @@ body {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .contact-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .contact-content .contact-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .contact-content .contact-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .contact-content .contact-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .contact-content .contact-options {
@@ -467,7 +476,7 @@ body {
   height: 18px;
   display: flex;
   justify-content: left;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
@@ -602,7 +611,7 @@ body {
 .terminal-content {
   position: absolute;
   width: 600px;
-  height: 450px;
+  height: 300px;
   right: 30%;
   bottom: 40%;
   border-top: 2px solid #FFFFFF;
@@ -622,33 +631,33 @@ body {
 
 .terminal-header h4 {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
   position: relative;
   left: -220px;
 }
 
 .terminal-content .terminal-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .terminal-content .terminal-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .terminal-content .terminal-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .terminal-content .terminal-options {
@@ -656,7 +665,7 @@ body {
   height: 18px;
   display: flex;
   justify-content: left;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
@@ -676,7 +685,7 @@ body {
 .terminal-content .css-typing {
   background-color: #000000;
   width: 588px;
-  height: 370px;
+  height: 220px;
   display: table;
   margin: 0 auto;
   align-items: center;
@@ -685,7 +694,9 @@ body {
   border-right: 2px solid #FFFFFF;
   border-bottom: 2px solid #FFFFFF;
   position: absolute;
-  left: 3px;
+  left: 8px;
+  font-family: claconneu;
+  font-weight: 100;
 }
 
 .login-content {
@@ -708,7 +719,7 @@ body {
   height: 28px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .login-header .tit {
@@ -728,23 +739,23 @@ body {
 }
 
 .login-content .login-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
   margin-right: 4px;
 }
 
 .login-content .login-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .login-content .login-img {
@@ -773,7 +784,7 @@ body {
 .login-content .header {
   display: flex;
   width: 280px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .username_info {
@@ -822,7 +833,7 @@ body {
   resize: none;
   background-color: #fff;
   padding-left: 3px;
-  cursor: url("img/verboten.png"), pointer;
+  cursor: url("../img/verboten.png"), pointer;
 }
 
 .pass_form textarea {
@@ -867,16 +878,16 @@ body {
   border-bottom: 2px solid #FFFFFF;
   border-right: 2px solid #FFFFFF;
   background-color: var(--lighterGrey);
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 #login:hover {
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .css-typing {
   width: 100px;
-  height: 100px;
+  height: 80px;
   position: absolute;
   left: 40px;
   display: flex;
@@ -886,10 +897,9 @@ body {
   font-size: 18px;
 }
 
-
 .terminal-content .terminal-footer {
   background-color: var(--grey);
-  width: 590px;
+  width: 593px;
   margin: 0 auto;
   position: absolute;
   bottom: 1px;
@@ -919,8 +929,8 @@ body {
 
 .css-typing p {
   border-right: .15em solid orange;
-  font-family: "Courier";
-  font-size: 20px;
+  font-family: inherit;
+  font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -1089,7 +1099,7 @@ footer #taskbar {
   display: flex;
   justify-content: space-around;
   font-size: 22px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 #taskbar .startButton p {
@@ -1099,7 +1109,7 @@ footer #taskbar {
 }
 
 #taskbar .startButton:hover {
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 #taskbar .startButton:active {
@@ -1108,7 +1118,7 @@ footer #taskbar {
   border-bottom: 2px solid #FFFFFF;
   border-right: 2px solid #FFFFFF;
   background-color: var(--lighterGrey);
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 #taskbar .partition {
@@ -1128,7 +1138,7 @@ footer #taskbar {
   left: 120px;
   justify-content: space-around;
   top: 15px;
-  cursor: url("img/verboten.png"), pointer;
+  cursor: url("../img/verboten.png"), pointer;
   width: 150px;
 }
 
@@ -1191,7 +1201,7 @@ footer #taskbar {
   display: flex;
   justify-content: space-around;
   font-size: 19px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 #taskbar .intro-button:active {
@@ -1203,7 +1213,8 @@ footer #taskbar {
 }
 
 .intro-button p {
-  font-weight: 600;
+  font-weight: 400;
+  text-shadow: 0.5i copx 0 black;
   position: relative;
   bottom: 10px;
 }
@@ -1270,7 +1281,7 @@ footer #taskbar {
 }
 
 #startmenu .startmenu-options:hover {
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 
@@ -1288,7 +1299,7 @@ footer #taskbar {
 .startmenu-options .computerIcon:hover {
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur");
+  cursor: url("../img/Cursor107.cur");
 }
 
 .computerIcon p {
@@ -1311,7 +1322,7 @@ footer #taskbar {
 .startmenu-options .aboutmeIcon:hover {
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur");
+  cursor: url("../img/Cursor107.cur");
 }
 
 .aboutmeIcon p {
@@ -1334,7 +1345,7 @@ footer #taskbar {
 .startmenu-options .contactIcon:hover {
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur");
+  cursor: url("../img/Cursor107.cur");
 
 }
 
@@ -1358,7 +1369,7 @@ footer #taskbar {
 .startmenu-options .resumeIcon:hover {
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur");
+  cursor: url("../img/Cursor107.cur");
 
 }
 
@@ -1391,7 +1402,7 @@ footer #taskbar {
 .startmenu-options .credits:hover {
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur");
+  cursor: url("../img/Cursor107.cur");
 }
 
 .credits p {
@@ -1414,7 +1425,7 @@ footer #taskbar {
 .startmenu-options .shutDown:hover {
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur");
+  cursor: url("../img/Cursor107.cur");
 
 }
 
@@ -1538,38 +1549,38 @@ footer #taskbar {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .credits-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .credits-content .credits-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .credits-content .credits-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .credits-content .credits-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .credits-content .credits-options {
@@ -1577,7 +1588,7 @@ footer #taskbar {
   height: 18px;
   display: flex;
   justify-content: left;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
@@ -1674,38 +1685,38 @@ footer #taskbar {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .update-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .update-content .update-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .update-content .update-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .update-content .update-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .update-content .update-info {
@@ -1736,7 +1747,7 @@ footer #taskbar {
   border-bottom: 2px solid #000000;
   border-right: 2px solid #000000;
   background-color: var(--grey);
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .update-content .update-options .update-yes:active {
@@ -1776,38 +1787,38 @@ footer #taskbar {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .loading-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .loading-content .loading-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .loading-content .loading-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .loading-content .loading-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .loading-content .loading-image {
@@ -1877,7 +1888,7 @@ footer #taskbar {
   height: 25px;
   width: 80px;
   background-color: var(--lighterGrey);
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .loading-content .loading-button .cancel-border {
@@ -2000,38 +2011,38 @@ footer #taskbar {
   height: 20px;
   color: #FFFFFF;
   background-color: #0808a9;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 }
 
 .job-header p {
   margin: 3px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .job-content .job-buttons {
   margin-top: 1px;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
 .job-content .job-buttons .minimize {
-  background-image: url('img/minimize.png');
+  background-image: url('../img/minimize.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .job-content .job-buttons .closeOut {
-  background-image: url('img/closeOut.png');
+  background-image: url('../img/closeOut.png');
   height: 18px;
   width: 20px;
   background-size: 18px;
   background-repeat: no-repeat;
   margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
+  cursor: url('../img/Cursor107.cur'), pointer;
 }
 
 .job-content .job-options {
@@ -2039,7 +2050,7 @@ footer #taskbar {
   height: 18px;
   display: flex;
   justify-content: left;
-  cursor: url("img/Cursor107.cur"), pointer;
+  cursor: url("../img/Cursor107.cur"), pointer;
 
 }
 
@@ -2163,11 +2174,11 @@ MOBILE VERSION */
 
   .icons {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 20%;
     position: relative;
-    height: 100px;
-    left: -1px;
+    top: 4%;
+    left: 4%;
   }
 
   .icons .computer-icon {
@@ -2207,7 +2218,6 @@ MOBILE VERSION */
   .icons .resume-icon {
     text-align: center;
     position: relative;
-    bottom: 20px;
   }
 
   .resume-icon p {
@@ -2222,15 +2232,15 @@ MOBILE VERSION */
 
   /* Intro */
   .intro {
-    position: relative;
+    position: absolute;
     border-top: 2px solid #FFFFFF;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid var(--darkerGrey);
     border-right: 2px solid var(--darkerGrey);
     background-color: var(--grey);
-    height: 450px;
+    height: 480px;
     width: 320px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 20%);
     top: 2%;
   }
 
@@ -2261,7 +2271,7 @@ MOBILE VERSION */
   }
 
   .intro .intro-buttons .closeOut {
-    background-image: url('img/closeOut.png');
+    background-image: url('../img/closeOut.png');
     background-size: 25px;
     height: 25px;
     width: 28px;
@@ -2292,7 +2302,7 @@ MOBILE VERSION */
   .intro .intro-content {
     background-color: #ffffe1;
     width: 300px;
-    height: 300px;
+    height: 380px;
     margin: 0 auto;
     align-items: center;
     border-top: 2px solid #000000;
@@ -2365,7 +2375,7 @@ MOBILE VERSION */
 
   /* Projects Content */
   .aboutme-content {
-    position: relative;
+    position: absolute;
     border-top: 2px solid #FFFFFF;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid var(--darkerGrey);
@@ -2405,7 +2415,7 @@ MOBILE VERSION */
   }
 
   .aboutme-content .aboutme-buttons .closeOut {
-    background-image: url('img/closeOut.png');
+    background-image: url('../img/closeOut.png');
     background-size: 25px;
     height: 25px;
     width: 28px;
@@ -2460,7 +2470,7 @@ MOBILE VERSION */
 
   .aboutme-content .aboutme-footer {
     background-color: var(--grey);
-    width: 302px;
+    width: 320px;
     margin: 0 auto;
     height: 27px;
     border-top: 1px solid var(--darkerGrey);
@@ -2489,7 +2499,7 @@ MOBILE VERSION */
 
   /* Contact */
   .contact-content {
-    position: relative;
+    position: absolute;
     border-top: 2px solid #FFFFFF;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid var(--darkerGrey);
@@ -2529,7 +2539,7 @@ MOBILE VERSION */
   }
 
   .contact-content .contact-buttons .closeOut {
-    background-image: url('img/closeOut.png');
+    background-image: url('../img/closeOut.png');
     background-size: 25px;
     height: 25px;
     width: 28px;
@@ -2715,7 +2725,7 @@ MOBILE VERSION */
   }
 
   .credits-content .credits-buttons .closeOut {
-    background-image: url('img/closeOut.png');
+    background-image: url('../img/closeOut.png');
     background-size: 25px;
     height: 25px;
     width: 28px;
@@ -2794,191 +2804,9 @@ MOBILE VERSION */
     margin-top: 10px;
   }
 
-  /* Update */
-  .update-content {
-    display: none;
-  }
-
-  /* Loading */
-  .loading-content {
-    display: none;
-  }
-
-  /* Job */
-  .job-content {
-    display: block;
-  }
-
-  .job-content {
-    position: relative;
-    border-top: 2px solid #FFFFFF;
-    border-left: 2px solid #FFFFFF;
-    border-bottom: 2px solid var(--darkerGrey);
-    border-right: 2px solid var(--darkerGrey);
-    background-color: var(--grey);
-    height: 450px;
-    width: 320px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 3%;
-  }
-
-  .job-content .job-header {
-    display: flex;
-    justify-content: space-between;
-    height: 38px;
-    color: #FFFFFF;
-    background-color: #0808a9;
-  }
-
-  .job-header p {
-    position: relative;
-    top: 10px;
-    font-size: 20px;
-  }
-
-  .job-content .job-buttons {
-    position: relative;
-    top: 4px;
-    height: 24px;
-    width: 27px;
-    right: 4px;
-  }
-
-  .job-content .job-buttons .minimize {
-    display: none;
-  }
-
-  .job-content .job-buttons .closeOut {
-    background-image: url('img/closeOut.png');
-    background-size: 25px;
-    height: 25px;
-    width: 28px;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
-  .job-content .job-options {
-    background-color: var(--grey);
-    height: 18px;
-    display: flex;
-    justify-content: left;
-  }
-
-  .job-options p {
-    margin: 0;
-    padding-left: 3px;
-    padding-top: 2px;
-  }
-
-  .job-content .job-separator {
-    width: 100%;
-    height: 4px;
-    border-top: 1px solid var(--darkerGrey);
-    background-color: var(--grey);
-  }
-
-  .job-content .job-info {
-    background-color: #ffffe1;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    align-items: center;
-    border-top: 2px solid #000000;
-    border-left: 2px solid #000000;
-    border-right: 2px solid #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
-    overflow-y: scroll;
-    overflow-x: none;
-  }
-
-  .job-content .job-info .job-text {
-    width: 300px;
-    font-size: 20px;
-    font-weight: 100
-  }
-
-  .job-content .job-text h2 {
-    margin-bottom: 35px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .job-text p {
-    font-size: 20px;
-    margin: 0;
-    text-align: left;
-  }
-
-
-  .job-content .jobs-footer {
-    background-color: var(--grey);
-    width: 302px;
-    margin: 0 auto;
-    height: 27px;
-    border-top: 1px solid var(--darkerGrey);
-    border-left: 1px solid var(--darkerGrey);
-    border-bottom: 1px solid #FFFFFF;
-    border-right: 1px solid #FFFFFF;
-    margin-top: 2px;
-    position: relative;
-    left: -2px;
-  }
-
-  .jobs-footer .job-footer-content {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .jobs-footer-content p {
-    margin-top: 6px;
-    margin-left: 4px;
-    text-align: center;
-  }
-
-  .jobs-footer-content img {
-    margin-top: 10px;
-  }
-
-  .job-content .job-image .balloons {
-    display: block;
-    position: relative;
-    bottom: 30px;
-    margin: 20px;
-    margin-bottom: 0px;
-  }
-
-  .job-content .job-image .msft {
-    display: none;
-  }
-
-  /* Taskbar */
-  #taskbar {
-    position: fixed;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  #taskbar .startButton {
-    width: 120px;
-    left: 10px;
-    font-size: 30px;
-  }
-
-  #taskbar .startButton input {
-    position: relative;
-    left: -2px;
-  }
-
-  #taskbar .startButton p {
-    position: relative;
-    left: -6px;
-    top: -20px;
-  }
-
   /* Terminal */
   .terminal-content {
-    position: relative;
+    position: absolute;
     border-top: 2px solid #FFFFFF;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid var(--darkerGrey);
@@ -2988,7 +2816,7 @@ MOBILE VERSION */
     width: 350px;
     left: 50%;
     transform: translateX(-50%);
-    top: 9%;
+    top: 18%;
   }
 
   .terminal-content .terminal-header {
@@ -3007,7 +2835,7 @@ MOBILE VERSION */
 
   .terminal-header h4 {
     position: relative;
-    left: -75px;
+    left: -68px;
     font-size: 22px;
     top: 6px;
   }
@@ -3025,7 +2853,7 @@ MOBILE VERSION */
   }
 
   .terminal-content .terminal-buttons .closeOut {
-    background-image: url('img/closeOut.png');
+    background-image: url('../img/closeOut.png');
     background-size: 25px;
     height: 25px;
     width: 28px;
@@ -3072,7 +2900,7 @@ MOBILE VERSION */
 
   .terminal-content .terminal-footer {
     background-color: var(--grey);
-    width: 344px;
+    width: 348px;
     margin: 0 auto;
     height: 27px;
     border-top: 1px solid var(--darkerGrey);
@@ -3098,185 +2926,4 @@ MOBILE VERSION */
   .terminal-footer-content img {
     margin-top: 10px;
   }
-}
-
-.application-content {
-  position: relative;
-  border-top: 2px solid #FFFFFF;
-  border-left: 2px solid #FFFFFF;
-  border-bottom: 2px solid var(--darkerGrey);
-  border-right: 2px solid var(--darkerGrey);
-  background-color: #fff;
-  height: 650px;
-  width: 720px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 8%;
-}
-
-.application-content .application-header {
-  display: flex;
-  justify-content: space-between;
-  height: 28px;
-  color: #FFFFFF;
-  background-color: #0808a9;
-}
-
-.application-header p {
-  position: relative;
-  bottom: 10px;
-  left: 4px;
-}
-
-.application-content .application-buttons {
-  position: relative;
-  top: 4px;
-  height: 24px;
-  width: 40px;
-  right: 8px;
-  display: flex;
-  flex-direction: row;
-}
-
-.application-content .application-buttons .minimize {
-  background-image: url('img/minimize.png');
-  height: 18px;
-  width: 20px;
-  background-size: 18px;
-  background-repeat: no-repeat;
-  cursor: url('img/Cursor107.cur'), pointer;
-  margin-right: 4px;
-}
-
-.application-content .application-buttons .closeOut {
-  background-image: url('img/closeOut.png');
-  height: 18px;
-  width: 20px;
-  background-size: 18px;
-  background-repeat: no-repeat;
-  margin-right: 2px;
-  cursor: url('img/Cursor107.cur'), pointer;
-}
-
-.application-content .application-options {
-  background-color: var(--grey);
-  height: 18px;
-  display: flex;
-  justify-content: left;
-}
-
-.application-options p {
-  margin: 0;
-  padding-left: 3px;
-  padding-top: 2px;
-}
-
-.application-content .application-separator {
-  width: 100%;
-  height: 4px;
-  border-top: 1px solid var(--darkerGrey);
-  background-color: var(--grey);
-}
-
-.application-content .application-footer {
-  background-color: var(--grey);
-  width: 720px;
-  margin: 0 auto;
-  position: absolute;
-  bottom: -4px;
-  left: -2px;
-  height: 27px;
-  border-top: 1px solid var(--darkerGrey);
-  border-left: 1px solid var(--darkerGrey);
-  border-bottom: 1px solid #FFFFFF;
-  border-right: 1px solid #FFFFFF;
-  padding-top: 1px;
-}
-
-.application-footer .application-footer-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.application-footer-content p {
-  margin-top: 6px;
-  margin-left: 4px;
-  text-align: center;
-}
-
-.application-footer-content img {
-  margin-top: 10px;
-}
-
-.application-text {
-  padding: 10px;
-  height: 580px;
-  overflow-y: scroll;
-}
-
-.first_pg {
-  display: flex;
-  flex-direction: row;
-}
-
-.first_pg_txt .body {
-  position: relative;
-  font-size: 18px;
-  margin-top: 40px;
-}
-
-.avatar {
-  width: 200px;
-}
-
-.cats {
-  width: 200px;
-  height: 300px;
-}
-
-.second_pg {
-  margin-bottom: 22px;
-}
-
-.second_pg .header {
-  font-size: 26px;
-}
-
-.third_pg {
-  margin-bottom: 22px;
-}
-
-.third_pg .header {
-  font-size: 26px;
-}
-
-.fourth_pg {
-  margin-bottom: 22px;
-}
-
-.fourth_pg .header {
-  font-size: 26px;
-}
-
-.fifth_pg {
-  margin-bottom: 22px;
-}
-
-.fifth_pg .header {
-  font-size: 26px;
-}
-
-.third_pg .content {
-  display: flex;
-  flex-direction: row;
-}
-
-.first_pg .first_pg_txt .content {
-  display: flex;
-  flex-direction: row;
-}
-
-.superbowl {
-  text-decoration: underline;
-  color: #000;
 }
