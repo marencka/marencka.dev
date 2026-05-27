@@ -202,7 +202,7 @@ body {
 .intro .intro-content {
   background-color: #ffffe1;
   width: 588px;
-  height: 400px;
+  height: 480px;
   display: table;
   margin: 0 auto;
   align-items: center;
@@ -227,7 +227,6 @@ body {
   margin: 0px;
   font-size: 20px;
   text-align: left;
-
 }
 
 .text-content p {
