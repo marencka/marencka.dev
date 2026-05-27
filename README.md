@@ -1,8 +1,5 @@
 # marencka.dev
 
-This is the original marencka.com — a Windows 98-themed personal site I built in 
-2021 in the back of a computational photography class I didn't like (sorry Dr. Singh). The code is 
-bad, like, truly bad. I didn't know what I was doing and agentic coding didn't exist. A Microsoft manager saw it on Twitter and 
-that's how I got my first job, despite having no internships or actual industry experience.
+This is the original marencka.com — a Windows 98-themed personal site I built in 2021 in the back of a computational photography class I didn't like (sorry Dr. Singh). The code is bad, like, *truly* bad. I didn't know what I was doing, but I had Stack Overflow and a vision. A Microsoft manager saw it on Twitter and hired me; no internships, no industry experience, just a weird Windows 98 site.
 
-It's preserved here as an artifact and because it is proof that the things you make for fun, badly, sometimes matter more than you think. Plus it's cool to see how far I've come. 
+It's preserved here as an artifact and a reminder: the things you make for fun, badly, sometimes matter more than you think. 
