@@ -1,112 +1,101 @@
+/* Window helpers */
+function openWindow(id) {
+  document.getElementById(id).style.display = 'block';
+}
 
+function closeWindow(id) {
+  document.getElementById(id).style.display = 'none';
+}
 
+function toggleWindow(id) {
+  var el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+function openResume() {
+  window.open('src/AMD2026.pdf', '_blank');
+}
+
+/* Taskbar clock */
 function updateTime() {
-  var clock = document.getElementById('clock');
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
   var ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12; // Convert to 12-hour format
-  clock.textContent = (hours) + ':' +
-    (minutes) + ' ' + ' ' + ampm;
+  hours = hours % 12 || 12;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  document.getElementById('clock').textContent = hours + ':' + minutes + ' ' + ampm;
 }
 
+/* Makes a window draggable by its title bar */
+function dragElement(el) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  var handle = el.querySelector('.window-header') || el;
+  handle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    el.style.top = (el.offsetTop - pos2) + 'px';
+    el.style.left = (el.offsetLeft - pos1) + 'px';
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+/* BSOD easter egg: Konami code (up up down down left right left right B A) */
+var KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+var konamiProgress = 0;
+
+document.addEventListener('keydown', function (e) {
+  var bsod = document.getElementById('bsod');
+  if (bsod.style.display !== 'none') {
+    bsod.style.display = 'none';
+    return;
+  }
+
+  var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if (key === KONAMI[konamiProgress]) {
+    konamiProgress++;
+    if (konamiProgress === KONAMI.length) {
+      konamiProgress = 0;
+      bsod.style.display = 'flex';
+    }
+  } else {
+    konamiProgress = key === KONAMI[0] ? 1 : 0;
+  }
+});
+
+/* Init (script is loaded with defer, so the DOM is ready) */
+updateTime();
 setInterval(updateTime, 1000);
 
-function showIntro() {
-  var x = document.getElementById('intro');
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
+['intro', 'aboutme', 'contact', 'credits', 'terminal'].forEach(function (id) {
+  dragElement(document.getElementById(id));
+});
+
+document.getElementById('bsod').addEventListener('click', function () {
+  this.style.display = 'none';
+});
+
+/* Clicking outside the start menu closes it */
+document.addEventListener('mouseup', function (e) {
+  var menu = document.getElementById('startmenu');
+  if (!menu.contains(e.target)) {
+    menu.style.display = 'none';
   }
-}
-
-function isMobileUser() {
-  window.mobileCheck = function () {
-    let check = false;
-    (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
-    return check;
-  };
-}
-
-function setDisplayNoneOnMobile() {
-  let tailwindIcon = document.querySelector(".tailwind");
-  let isMobile = isMobileUser();
-  if (tailwindIcon && isMobile) {
-    tailwindIcon.classList.add("hide");
-  }
-}
-
-function closeJob() {
-  document.getElementById('job-content').style.display = 'none';
-}
-
-function closeUpdate() {
-  document.getElementById('update-content').style.display = "none";
-}
-
-function showAboutMe() {
-  document.getElementById('aboutme-content').style.display = "block";
-}
-
-function showContact() {
-  document.getElementById('contact-content').style.display = "block";
-}
-
-function showTerminal() {
-  document.getElementById('terminal-content').style.display = 'block';
-}
-
-function showCredits() {
-  document.getElementById('credits-content').style.display = 'block';
-}
-
-function closeOutCredits() {
-  document.getElementById('credits-content').style.display = 'none';
-}
-
-function closeOutTerminal() {
-  document.getElementById('terminal-content').style.display = 'none';
-}
-
-function closeOut() {
-  document.getElementById('intro').style.display = 'none';
-}
-
-function closeOutAboutMe() {
-  document.getElementById('aboutme-content').style.display = 'none';
-}
-
-function closeOutContact() {
-  document.getElementById('contact-content').style.display = 'none';
-}
-
-function closeOutLogin() {
-  document.querySelector('.login-content').style.display = 'none';
-}
-
-function openResume() {
-  window.open('src/alexisdanzresume.pdf', '_blank');
-  return false;
-}
-
-function openLoading() {
-  document.getElementById('loading-content').style.display = 'block';
-  document.getElementById('update-content').style.display = 'none';
-
-  setTimeout(function () {
-    document.getElementById('loading-content').style.display = 'none';
-    document.getElementById('job-content').style.display = 'block';
-  }, 7000);
-}
-
-function showStart() {
-  var x = document.getElementById('startmenu');
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
-  }
-}
-
+});
