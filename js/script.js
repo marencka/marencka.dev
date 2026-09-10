@@ -1,6 +1,14 @@
+/* Analytics helper — no-ops if gtag is unavailable (e.g. blocked by an ad blocker) */
+function track(eventName, params) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, params || {});
+  }
+}
+
 /* Window helpers */
 function openWindow(id) {
   document.getElementById(id).style.display = 'block';
+  track('open_window', { window_id: id });
 }
 
 function closeWindow(id) {
@@ -9,11 +17,16 @@ function closeWindow(id) {
 
 function toggleWindow(id) {
   var el = document.getElementById(id);
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  var opening = el.style.display === 'none';
+  el.style.display = opening ? 'block' : 'none';
+  if (opening) {
+    track('open_window', { window_id: id });
+  }
 }
 
 function openResume() {
   window.open('src/AMD2026.pdf', '_blank');
+  track('open_resume');
 }
 
 /* Taskbar clock */
@@ -74,6 +87,7 @@ document.addEventListener('keydown', function (e) {
     if (konamiProgress === KONAMI.length) {
       konamiProgress = 0;
       bsod.style.display = 'flex';
+      track('easter_egg_found');
     }
   } else {
     konamiProgress = key === KONAMI[0] ? 1 : 0;
@@ -90,6 +104,13 @@ setInterval(updateTime, 1000);
 
 document.getElementById('bsod').addEventListener('click', function () {
   this.style.display = 'none';
+});
+
+/* Contact link tracking (Email / LinkedIn / GitHub) */
+document.querySelectorAll('.contact-icons a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    track('contact_click', { method: link.parentElement.className });
+  });
 });
 
 /* Clicking outside the start menu closes it */
